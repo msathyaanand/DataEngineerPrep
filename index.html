@@ -2,1354 +2,1351 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Engineer Interview Prep 2025</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="Your ultimate 2025 guide to crack Data Engineering interviews. Features curated resources, interview questions (SQL, Python, System Design), key skills, and practical preparation tips.">
+  <meta name="keywords"
+    content="data engineer interview, data engineering prep, data engineer skills 2025, sql interview questions, python data engineering, system design interview, data pipeline, etl, elt, cloud data engineer, data engineer resources">
 
-        .gradient-bg {
-            background: linear-gradient(135deg, #6B73FF 0%, #000DFF 100%);
-            /* --- Add background-image URL here if desired --- */
-            background-size: cover;
-            background-position: center;
-        }
+  <title>Data Engineer Interview Prep 2025</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
 
-        .resource-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
+    .gradient-bg {
+      background: linear-gradient(135deg, #6B73FF 0%, #000DFF 100%);
+      background-size: cover;
+      background-position: center;
+    }
 
-        .question-card:hover,
-        .system-design-card:hover {
-            background-color: #f8fafc;
-        }
+    .resource-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
 
-        .nav-link:hover {
-            color: #3b82f6;
-        }
+    .question-card:hover,
+    .system-design-card:hover,
+    .testimonial-card:hover {
+      background-color: #f8fafc;
+    }
 
-        .hero-subtitle-shadow {
-            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-        }
+    .nav-link:hover {
+      color: #3b82f6;
+    }
 
-        .sample-answer.hidden {
-            display: none;
-        }
+    .hero-subtitle-shadow {
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    }
 
-        .level-tag {
-            display: inline-block;
-            background-color: #e5e7eb;
-            /* bg-gray-200 */
-            color: #4b5563;
-            /* text-gray-600 */
-            font-size: 0.7rem;
-            /* text-xs */
-            font-weight: 500;
-            /* font-medium */
-            margin-right: 0.25rem;
-            /* mr-1 */
-            margin-bottom: 0.25rem;
-            /* mb-1 */
-            padding: 0.125rem 0.5rem;
-            /* px-2 py-0.5 */
-            border-radius: 9999px;
-            /* rounded-full */
-        }
-    </style>
+    .sample-answer.hidden {
+      display: none;
+    }
+
+    .level-tag {
+      display: inline-block;
+      background-color: #e5e7eb;
+      color: #4b5563;
+      font-size: 0.7rem;
+      font-weight: 500;
+      margin-right: 0.25rem;
+      margin-bottom: 0.25rem;
+      padding: 0.125rem 0.5rem;
+      border-radius: 9999px;
+    }
+  </style>
 </head>
 
 <body class="font-sans antialiased text-gray-800">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-sm sticky top-0 z-50">
+  <!-- Navigation -->
+  <nav class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <div class="flex items-center">
+          <div class="flex-shrink-0 flex items-center"> <i class="fas fa-database text-blue-600 text-2xl mr-2"></i>
+            <span class="text-xl font-bold text-gray-900">DataEngineerPrep</span>
+          </div>
+        </div>
+        <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+          <a href="#resources"
+            class="nav-link border-transparent text-gray-500 hover:border-blue-500 hover:text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Resources</a>
+          <a href="#questions"
+            class="nav-link border-transparent text-gray-500 hover:border-blue-500 hover:text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Questions</a>
+          <a href="#system-design"
+            class="nav-link border-transparent text-gray-500 hover:border-blue-500 hover:text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">System
+            Design</a>
+          <a href="#skills"
+            class="nav-link border-transparent text-gray-500 hover:border-blue-500 hover:text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Skills</a>
+          <a href="#tips"
+            class="nav-link border-transparent text-gray-500 hover:border-blue-500 hover:text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Tips</a>
+          <a href="#testimonials"
+            class="nav-link border-transparent text-gray-500 hover:border-blue-500 hover:text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Success
+            Stories</a>
+        </div>
+        <div class="hidden sm:ml-6 sm:flex sm:items-center"> <a href="#newsletter"
+            class="ml-8 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+            Get Updates </a> </div>
+        <div class="-mr-2 flex items-center sm:hidden"> <button type="button" id="mobile-menu-button"
+            class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+            aria-controls="mobile-menu" aria-expanded="false"> <span class="sr-only">Open main menu</span> <i
+              class="fas fa-bars"></i> </button> </div>
+      </div>
+    </div>
+    <div class="hidden sm:hidden" id="mobile-menu">
+      <div class="pt-2 pb-3 space-y-1"> <a href="#resources"
+          class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700">Resources</a>
+        <a href="#questions"
+          class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700">Questions</a>
+        <a href="#system-design"
+          class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700">System
+          Design</a> <a href="#skills"
+          class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700">Skills</a>
+        <a href="#tips"
+          class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700">Tips</a>
+        <a href="#testimonials"
+          class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700">Success
+          Stories</a> <a href="#newsletter"
+          class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700">Get
+          Updates</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="gradient-bg">
+    <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h1 class="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl"> <span class="block">Crack
+            Your</span> <span class="block">Data Engineering Interview</span> </h1>
+        <p
+          class="mt-3 max-w-md mx-auto text-base text-blue-200 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl hero-subtitle-shadow">
+          The ultimate 2025 guide with curated resources, interview questions, and practical tips to land your dream
+          data engineering job. </p>
+        <div class="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
+          <div class="rounded-md shadow"> <a href="#resources"
+              class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-700 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10">
+              Explore Resources </a> </div>
+          <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3"> <a href="#questions"
+              class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 bg-opacity-60 hover:bg-opacity-70 md:py-4 md:text-lg md:px-10">
+              See Questions </a> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stats Section -->
+  <div class="bg-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="lg:text-center">
+        <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Why This Guide</h2>
+        <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"> Your Comprehensive
+          Prep Source </p>
+        <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto"> Covering all aspects of the 2025 Data Engineering
+          landscape. </p>
+      </div>
+      <div class="mt-10">
+        <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="bg-white overflow-hidden shadow rounded-lg">
+            <div class="px-4 py-5 sm:p-6">
+              <div class="flex items-center">
+                <div class="flex-shrink-0 bg-blue-500 rounded-md p-3"> <i class="fas fa-book-open text-white text-xl"
+                    aria-hidden="true"></i> </div>
+                <div class="ml-5 w-0 flex-1">
+                  <dt class="text-sm font-medium text-gray-500 truncate"> Key Books Reviewed </dt>
+                  <dd class="flex items-baseline">
+                    <div class="text-2xl font-semibold text-gray-900"> 7 </div>
+                  </dd>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white overflow-hidden shadow rounded-lg">
+            <div class="px-4 py-5 sm:p-6">
+              <div class="flex items-center">
+                <div class="flex-shrink-0 bg-green-500 rounded-md p-3"> <i class="fas fa-laptop-code text-white text-xl"
+                    aria-hidden="true"></i> </div>
+                <div class="ml-5 w-0 flex-1">
+                  <dt class="text-sm font-medium text-gray-500 truncate"> Courses & Certs Covered </dt>
+                  <dd class="flex items-baseline">
+                    <div class="text-2xl font-semibold text-gray-900"> 10 </div>
+                  </dd>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white overflow-hidden shadow rounded-lg">
+            <div class="px-4 py-5 sm:p-6">
+              <div class="flex items-center">
+                <div class="flex-shrink-0 bg-purple-500 rounded-md p-3"> <i class="fas fa-comments text-white text-xl"
+                    aria-hidden="true"></i> </div>
+                <div class="ml-5 w-0 flex-1">
+                  <dt class="text-sm font-medium text-gray-500 truncate"> Common Interview Qs </dt>
+                  <dd class="flex items-baseline">
+                    <div class="text-2xl font-semibold text-gray-900"> 20 </div>
+                  </dd>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white overflow-hidden shadow rounded-lg">
+            <div class="px-4 py-5 sm:p-6">
+              <div class="flex items-center">
+                <div class="flex-shrink-0 bg-yellow-500 rounded-md p-3"> <i
+                    class="fas fa-screwdriver-wrench text-white text-xl" aria-hidden="true"></i> </div>
+                <div class="ml-5 w-0 flex-1">
+                  <dt class="text-sm font-medium text-gray-500 truncate"> Essential DE Tools </dt>
+                  <dd class="flex items-baseline">
+                    <div class="text-2xl font-semibold text-gray-900"> 15 </div>
+                  </dd>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Resources Section -->
+  <div id="resources" class="bg-gray-50 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="lg:text-center">
+        <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Resources</h2>
+        <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"> Essential Learning
+          Resources </p>
+        <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto"> Curated books, courses, and communities to master
+          data engineering. </p>
+      </div>
+      <div class="mt-10">
+        <div class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
+          <div class="relative">
+            <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white"> <i
+                class="fas fa-book text-xl"></i> </div>
+            <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Books</p>
+            <div class="mt-2 ml-16 text-base text-gray-500">
+              <ul class="list-disc pl-5 space-y-2">
+                <li><span class="font-medium"><a href="https://dataintensive.net" target="_blank"
+                      rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 hover:underline">Designing
+                      Data-Intensive Applications</a></span> by Martin Kleppmann</li>
+                <li><span class="font-medium"><a
+                      href="https://www.oreilly.com/library/view/fundamentals-of-data/9781098108308/" target="_blank"
+                      rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 hover:underline">Fundamentals
+                      of Data Engineering</a></span> by Joe Reis and Matt Housley</li>
+                <li><span class="font-medium"><a
+                      href="https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/books/data-warehouse-dw-toolkit/"
+                      target="_blank" rel="noopener noreferrer"
+                      class="text-blue-600 hover:text-blue-800 hover:underline">The Data Warehouse Toolkit</a></span> by
+                  Ralph Kimball</li>
+                <li><span class="font-medium"><a
+                      href="https://www.oreilly.com/library/view/spark-the-definitive/9781491912201/" target="_blank"
+                      rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 hover:underline">Spark: The
+                      Definitive Guide</a></span> by Bill Chambers</li>
+                <li><span class="font-medium"><a
+                      href="https://www.packtpub.com/product/data-engineering-with-python/9781801818076" target="_blank"
+                      rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 hover:underline">Data
+                      Engineering with Python</a></span> by Paul Crickard</li>
+              </ul>
+            </div>
+          </div>
+          <div class="relative">
+            <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-green-500 text-white"> <i
+                class="fas fa-graduation-cap text-xl"></i> </div>
+            <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Courses & Certifications</p>
+            <div class="mt-2 ml-16 text-base text-gray-500">
+              <ul class="list-disc pl-5 space-y-2">
+                <li><span class="font-medium"><a href="https://www.datacamp.com/certification/data-engineer"
+                      target="_blank" rel="noopener noreferrer"
+                      class="text-blue-600 hover:text-blue-800 hover:underline">DataCamp Data Engineer Career
+                      Track</a></span> (Python, SQL, Airflow)</li>
+                <li><span class="font-medium"><a href="https://cloud.google.com/learn/certification/data-engineer"
+                      target="_blank" rel="noopener noreferrer"
+                      class="text-blue-600 hover:text-blue-800 hover:underline">Google Professional Data
+                      Engineer</a></span> certification</li>
+                <li><span class="font-medium"><a
+                      href="https://aws.amazon.com/certification/certified-data-engineer-associate/" target="_blank"
+                      rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 hover:underline">AWS Certified
+                      Data Engineer – Associate</a></span></li>
+                <li><span class="font-medium"><a href="https://learn.microsoft.com/en-us/training/courses/dp-203t00"
+                      target="_blank" rel="noopener noreferrer"
+                      class="text-blue-600 hover:text-blue-800 hover:underline">Microsoft Azure Data Engineer
+                      Associate</a></span></li>
+                <li><span class="font-medium"><a href="https://dataengineeracademy.com/courses/sql-tutorial-free/"
+                      target="_blank" rel="noopener noreferrer"
+                      class="text-blue-600 hover:text-blue-800 hover:underline">Free SQL Course</a></span> by Data
+                  Engineer Academy</li>
+              </ul>
+            </div>
+          </div>
+          <div class="relative">
+            <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-red-500 text-white"> <i
+                class="fab fa-youtube text-xl"></i> </div>
+            <p class="ml-16 text-lg leading-6 font-medium text-gray-900">YouTube Channels</p>
+            <div class="mt-2 ml-16 text-base text-gray-500">
+              <ul class="list-disc pl-5 space-y-2">
+                <li><span class="font-medium"><a href="https://www.youtube.com/@DataEngineerOne" target="_blank"
+                      rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 hover:underline">Data Engineer
+                      One</a></span> - Real-world projects, Airflow, AWS</li>
+                <li><span class="font-medium"><a href="https://www.youtube.com/@SeattleDataGuy" target="_blank"
+                      rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 hover:underline">Seattle Data
+                      Guy</a></span> - Career advice & industry trends</li>
+                <li><span class="font-medium"><a href="https://www.youtube.com/@datasciencedojo" target="_blank"
+                      rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 hover:underline">Data Science
+                      Dojo</a></span> - SQL & cloud computing tutorials</li>
+              </ul>
+            </div>
+          </div>
+          <div class="relative">
+            <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-purple-500 text-white"> <i
+                class="fas fa-users text-xl"></i> </div>
+            <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Websites & Communities</p>
+            <div class="mt-2 ml-16 text-base text-gray-500">
+              <ul class="list-disc pl-5 space-y-2">
+                <li><span class="font-medium"><a href="https://datatalks.club" target="_blank" rel="noopener noreferrer"
+                      class="text-blue-600 hover:text-blue-800 hover:underline">DataTalks.Club</a></span> -
+                  Community-driven resources</li>
+                <li><span class="font-medium"><a href="https://www.reddit.com/r/dataengineering/" target="_blank"
+                      rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 hover:underline">Reddit
+                      r/dataengineering</a></span> - Peer advice & book recs</li>
+                <li><span class="font-medium"><a href="https://dataengineeracademy.com" target="_blank"
+                      rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 hover:underline">Data Engineer
+                      Academy</a></span> - Free courses & projects</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-16">
+        <h3 class="text-2xl font-bold text-gray-900 text-center mb-8">Useful Free Resources</h3>
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div
+            class="resource-card bg-white overflow-hidden shadow rounded-lg transition duration-300 ease-in-out p-5 flex flex-col text-center h-full">
+            <div class="flex-grow">
+              <div class="mb-3 inline-block"> <i class="fas fa-list-check text-blue-500 text-3xl"></i> </div>
+              <h4 class="text-md font-semibold text-gray-900 mb-2">SQL Must Do List</h4>
+              <p class="text-sm text-gray-600 mb-4"> Essential SQL patterns every DE needs.</p>
+            </div> <a href="https://topmate.io/sathyaanand/1495112" target="_blank" rel="noopener noreferrer"
+              class="text-sm font-medium text-blue-600 hover:text-blue-800 hover:underline mt-auto pt-2">Get Resource
+              →</a>
+          </div>
+          <div
+            class="resource-card bg-white overflow-hidden shadow rounded-lg transition duration-300 ease-in-out p-5 flex flex-col text-center h-full">
+            <div class="flex-grow">
+              <div class="mb-3 inline-block"> <i class="fas fa-code text-green-500 text-3xl"></i> </div>
+              <h4 class="text-md font-semibold text-gray-900 mb-2">Leetcode SQL Solutions</h4>
+              <p class="text-sm text-gray-600 mb-4"> Practice common SQL interview questions.</p>
+            </div> <a href="https://topmate.io/sathyaanand/1441925" target="_blank" rel="noopener noreferrer"
+              class="text-sm font-medium text-green-600 hover:text-green-800 hover:underline mt-auto pt-2">Get Solutions
+              →</a>
+          </div>
+          <div
+            class="resource-card bg-white overflow-hidden shadow rounded-lg transition duration-300 ease-in-out p-5 flex flex-col text-center h-full">
+            <div class="flex-grow">
+              <div class="mb-3 inline-block"> <i class="fab fa-python text-yellow-500 text-3xl"></i> </div>
+              <h4 class="text-md font-semibold text-gray-900 mb-2">Python Leetcode Solutions</h4>
+              <p class="text-sm text-gray-600 mb-4"> Python solutions for coding interviews.</p>
+            </div> <a href="https://topmate.io/sathyaanand/1439710" target="_blank" rel="noopener noreferrer"
+              class="text-sm font-medium text-yellow-600 hover:text-yellow-800 hover:underline mt-auto pt-2">Get
+              Solutions →</a>
+          </div>
+          <div
+            class="resource-card bg-white overflow-hidden shadow rounded-lg transition duration-300 ease-in-out p-5 flex flex-col text-center h-full">
+            <div class="flex-grow">
+              <div class="mb-3 inline-block"> <i class="fas fa-briefcase text-purple-500 text-3xl"></i> </div>
+              <h4 class="text-md font-semibold text-gray-900 mb-2">Work Anywhere - 500+ Jobs</h4>
+              <p class="text-sm text-gray-600 mb-4"> Curated list of remote job opportunities.</p>
+            </div> <a href="https://topmate.io/sathyaanand/1422931" target="_blank" rel="noopener noreferrer"
+              class="text-sm font-medium text-purple-600 hover:text-purple-800 hover:underline mt-auto pt-2">Find Jobs
+              →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Top Recommended Paid Resources -->
+  <div class="bg-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-extrabold text-gray-900 mb-8">Top Recommended Paid Resources</h2>
+      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"> <a href="https://dataintensive.net/"
+          target="_blank" rel="noopener noreferrer"
+          class="block resource-card bg-white overflow-hidden shadow rounded-lg transition duration-300 ease-in-out no-underline hover:no-underline focus:no-underline active:no-underline">
+          <div class="px-4 py-5 sm:p-6 h-full flex flex-col justify-between">
+            <div>
+              <div class="flex items-center">
+                <div class="flex-shrink-0 bg-blue-100 rounded-md p-3"> <i class="fas fa-book text-blue-600 text-xl"
+                    aria-hidden="true"></i> </div>
+                <div class="ml-5 w-0 flex-1">
+                  <h3 class="text-lg font-medium text-gray-900">Designing Data-Intensive Applications</h3>
+                  <p class="mt-1 text-sm text-gray-500">Martin Kleppmann</p>
+                </div>
+              </div>
+              <div class="mt-4">
+                <p class="text-sm text-gray-600"> Deep dive into distributed systems, data modeling, and stream
+                  processing. Essential for understanding modern data architectures. </p>
+              </div>
+            </div>
+            <div class="mt-4"> <span
+                class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                Must Read </span> </div>
+          </div>
+        </a> <a href="https://www.datacamp.com/tracks/data-engineer-with-python" target="_blank"
+          rel="noopener noreferrer"
+          class="block resource-card bg-white overflow-hidden shadow rounded-lg transition duration-300 ease-in-out no-underline hover:no-underline focus:no-underline active:no-underline">
+          <div class="px-4 py-5 sm:p-6 h-full flex flex-col justify-between">
+            <div>
+              <div class="flex items-center">
+                <div class="flex-shrink-0 bg-green-100 rounded-md p-3"> <i
+                    class="fas fa-graduation-cap text-green-600 text-xl" aria-hidden="true"></i> </div>
+                <div class="ml-5 w-0 flex-1">
+                  <h3 class="text-lg font-medium text-gray-900">DataCamp Data Engineer Track</h3>
+                  <p class="mt-1 text-sm text-gray-500">Interactive Learning</p>
+                </div>
+              </div>
+              <div class="mt-4">
+                <p class="text-sm text-gray-600"> Comprehensive track covering Python, SQL, Airflow, and Git with
+                  hands-on exercises. Great for building practical skills. </p>
+              </div>
+            </div>
+            <div class="mt-4"> <span
+                class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                Popular </span> </div>
+          </div>
+        </a> <a href="https://cloud.google.com/learn/certification/data-engineer" target="_blank"
+          rel="noopener noreferrer"
+          class="block resource-card bg-white overflow-hidden shadow rounded-lg transition duration-300 ease-in-out no-underline hover:no-underline focus:no-underline active:no-underline">
+          <div class="px-4 py-5 sm:p-6 h-full flex flex-col justify-between">
+            <div>
+              <div class="flex items-center">
+                <div class="flex-shrink-0 bg-purple-100 rounded-md p-3"> <i
+                    class="fas fa-certificate text-purple-600 text-xl" aria-hidden="true"></i> </div>
+                <div class="ml-5 w-0 flex-1">
+                  <h3 class="text-lg font-medium text-gray-900">Google Professional Data Engineer</h3>
+                  <p class="mt-1 text-sm text-gray-500">Cloud Certification</p>
+                </div>
+              </div>
+              <div class="mt-4">
+                <p class="text-sm text-gray-600"> Validates skills in designing and managing data systems on Google
+                  Cloud. Highly valued by employers in 2025. </p>
+              </div>
+            </div>
+            <div class="mt-4"> <span
+                class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-purple-100 text-purple-800">
+                Industry Standard </span> </div>
+          </div>
+        </a> </div>
+    </div>
+  </div>
+
+  <!-- Interview Questions Section -->
+  <div id="questions" class="bg-gray-50 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="lg:text-center">
+        <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Interview Prep</h2>
+        <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"> Most-Asked
+          Data Engineering Interview Questions </p>
+        <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto"> Be prepared for these common questions in
+          2025 interviews. </p>
+      </div>
+      <div class="mt-10">
+        <div id="questions-list" class="space-y-4">
+          <div class="question-card bg-white shadow overflow-hidden sm:rounded-lg transition duration-150 ease-in-out">
+            <div class="px-4 py-5 sm:p-6">
+              <h3 class="text-lg leading-6 font-medium text-gray-900">1. What is the difference between
+                structured, semi-structured, and unstructured data?</h3>
+              <div class="mt-1"> <span class="level-tag">Junior</span><span class="level-tag">Mid</span>
+              </div>
+              <div class="mt-2 max-w-xl text-sm text-gray-500">
+                <p> <span class="font-medium">What Interviewers Look For:</span> Understanding of data
+                  organization levels and examples (tables, JSON/XML, text/images). </p>
+              </div>
+              <div class="mt-3 text-sm"> <a href="#"
+                  class="toggle-answer-btn font-medium text-blue-600 hover:text-blue-500"> View Sample
+                  Answer <span aria-hidden="true">→</span> </a> </div>
+              <div class="sample-answer hidden mt-3 pt-3 border-t border-gray-200 text-sm text-gray-600">
+                <p>Structured data is highly organized and stored in tabular formats (e.g., relational
+                  databases). Semi-structured data has some organizational properties but doesn’t fit
+                  into tables (e.g., JSON, XML). Unstructured data lacks a predefined format (e.g.,
+                  text, images, videos).</p>
+              </div>
+            </div>
+          </div>
+          <div class="question-card bg-white shadow overflow-hidden sm:rounded-lg transition duration-150 ease-in-out">
+            <div class="px-4 py-5 sm:p-6">
+              <h3 class="text-lg leading-6 font-medium text-gray-900">2. Explain the concept of a data
+                pipeline and its role in data engineering.</h3>
+              <div class="mt-1"> <span class="level-tag">Junior</span><span class="level-tag">Mid</span>
+              </div>
+              <div class="mt-2 max-w-xl text-sm text-gray-500">
+                <p> <span class="font-medium">What Interviewers Look For:</span> Understanding of
+                  ETL/ELT, automation, data movement, and purpose (warehousing, analytics). </p>
+              </div>
+              <div class="mt-3 text-sm"> <a href="#"
+                  class="toggle-answer-btn font-medium text-blue-600 hover:text-blue-500"> View Sample
+                  Answer <span aria-hidden="true">→</span> </a> </div>
+              <div class="sample-answer hidden mt-3 pt-3 border-t border-gray-200 text-sm text-gray-600">
+                <p>A data pipeline automates the extraction, transformation, and loading (ETL/ELT) of
+                  data from various sources to destinations like data warehouses or lakes, ensuring
+                  efficient and reliable data movement for analysis or operations.</p>
+              </div>
+            </div>
+          </div>
+          <div class="question-card bg-white shadow overflow-hidden sm:rounded-lg transition duration-150 ease-in-out">
+            <div class="px-4 py-5 sm:p-6">
+              <h3 class="text-lg leading-6 font-medium text-gray-900">3. What are the main design schemas
+                used in data modeling?</h3>
+              <div class="mt-1"> <span class="level-tag">Mid</span> </div>
+              <div class="mt-2 max-w-xl text-sm text-gray-500">
+                <p> <span class="font-medium">What Interviewers Look For:</span> Knowledge of Star,
+                  Snowflake, and Galaxy schemas and their characteristics. </p>
+              </div>
+              <div class="mt-3 text-sm"> <a href="#"
+                  class="toggle-answer-btn font-medium text-blue-600 hover:text-blue-500"> View Sample
+                  Answer <span aria-hidden="true">→</span> </a> </div>
+              <div class="sample-answer hidden mt-3 pt-3 border-t border-gray-200 text-sm text-gray-600">
+                <p>The three primary schemas are:<br><strong>Star schema:</strong> Central fact table
+                  linked directly to dimension tables (denormalized). Simple and fast for
+                  queries.<br><strong>Snowflake schema:</strong> Extension of star schema where
+                  dimension tables are normalized into multiple related tables. Saves space but
+                  queries are more complex.<br><strong>Galaxy schema (Fact Constellation):</strong>
+                  Multiple fact tables sharing dimension tables. Used for complex scenarios.</p>
+              </div>
+            </div>
+          </div>
+          <div class="question-card bg-white shadow overflow-hidden sm:rounded-lg transition duration-150 ease-in-out">
+            <div class="px-4 py-5 sm:p-6">
+              <h3 class="text-lg leading-6 font-medium text-gray-900">4. How do you handle duplicate data
+                points in SQL?</h3>
+              <div class="mt-1"> <span class="level-tag">Junior</span><span class="level-tag">Mid</span>
+              </div>
+              <div class="mt-2 max-w-xl text-sm text-gray-500">
+                <p> <span class="font-medium">What Interviewers Look For:</span> Practical SQL knowledge
+                  (DISTINCT, GROUP BY, ROW_NUMBER). </p>
+              </div>
+              <div class="mt-3 text-sm"> <a href="#"
+                  class="toggle-answer-btn font-medium text-blue-600 hover:text-blue-500"> View Sample
+                  Answer <span aria-hidden="true">→</span> </a> </div>
+              <div class="sample-answer hidden mt-3 pt-3 border-t border-gray-200 text-sm text-gray-600">
+                <p>Several methods can be used:<br>• Use `SELECT DISTINCT column1, column2 FROM table;`
+                  to retrieve unique rows.<br>• Use `GROUP BY` clause on all relevant columns combined
+                  with aggregate functions (like MIN, MAX) if needed.<br>• Use window functions like
+                  `ROW_NUMBER()` partitioned by the columns that define uniqueness, then filter where
+                  the row number is 1.</p>
+              </div>
+            </div>
+          </div>
+          <div class="question-card bg-white shadow overflow-hidden sm:rounded-lg transition duration-150 ease-in-out">
+            <div class="px-4 py-5 sm:p-6">
+              <h3 class="text-lg leading-6 font-medium text-gray-900">5. What is data lineage and why is
+                it important?</h3>
+              <div class="mt-1"> <span class="level-tag">Mid</span><span class="level-tag">Senior</span>
+              </div>
+              <div class="mt-2 max-w-xl text-sm text-gray-500">
+                <p> <span class="font-medium">What Interviewers Look For:</span> Understanding the
+                  concept and its importance for debugging, trust, compliance, and impact analysis.
+                </p>
+              </div>
+              <div class="mt-3 text-sm"> <a href="#"
+                  class="toggle-answer-btn font-medium text-blue-600 hover:text-blue-500"> View Sample
+                  Answer <span aria-hidden="true">→</span> </a> </div>
+              <div class="sample-answer hidden mt-3 pt-3 border-t border-gray-200 text-sm text-gray-600">
+                <p>Data lineage tracks the origin, movement, and transformation of data throughout its
+                  lifecycle. It's crucial for understanding data sources, troubleshooting pipeline
+                  issues, ensuring data quality, performing impact analysis of changes, and meeting
+                  regulatory compliance requirements (like GDPR).</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="question-card hidden bg-white shadow overflow-hidden sm:rounded-lg transition duration-150 ease-in-out">
+            <div class="px-4 py-5 sm:p-6">
+              <h3 class="text-lg leading-6 font-medium text-gray-900">6. How do you ensure data quality
+                and integrity in a pipeline?</h3>
+              <div class="mt-1"> <span class="level-tag">Mid</span><span class="level-tag">Senior</span>
+              </div>
+              <div class="mt-2 max-w-xl text-sm text-gray-500">
+                <p> <span class="font-medium">What Interviewers Look For:</span> Knowledge of specific
+                  techniques (validation, deduplication, checks) and tools (e.g., Great Expectations).
+                </p>
+              </div>
+              <div class="mt-3 text-sm"> <a href="#"
+                  class="toggle-answer-btn font-medium text-blue-600 hover:text-blue-500"> View Sample
+                  Answer <span aria-hidden="true">→</span> </a> </div>
+              <div class="sample-answer hidden mt-3 pt-3 border-t border-gray-200 text-sm text-gray-600">
+                <p>Implement validation checks at various stages (e.g., null checks, type checks, range
+                  checks), use deduplication techniques, enforce schema consistency, implement data
+                  profiling, set up monitoring and alerting for anomalies, and potentially use data
+                  quality frameworks like Great Expectations or dbt tests.</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="question-card hidden bg-white shadow overflow-hidden sm:rounded-lg transition duration-150 ease-in-out">
+            <div class="px-4 py-5 sm:p-6">
+              <h3 class="text-lg leading-6 font-medium text-gray-900">7. What is your experience with ETL
+                tools? Which do you prefer and why?</h3>
+              <div class="mt-1"> <span class="level-tag">Mid</span><span class="level-tag">Senior</span>
+              </div>
+              <div class="mt-2 max-w-xl text-sm text-gray-500">
+                <p> <span class="font-medium">What Interviewers Look For:</span> Familiarity with
+                  popular tools (Airflow, Spark, Glue, Data Factory, dbt), ability to articulate
+                  pros/cons based on use cases. </p>
+              </div>
+              <div class="mt-3 text-sm"> <a href="#"
+                  class="toggle-answer-btn font-medium text-blue-600 hover:text-blue-500"> View Sample
+                  Answer <span aria-hidden="true">→</span> </a> </div>
+              <div class="sample-answer hidden mt-3 pt-3 border-t border-gray-200 text-sm text-gray-600">
+                <p>Sample: “I have used Apache Airflow extensively for orchestrating complex
+                  workflows... [rest of answer]”</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="question-card hidden bg-white shadow overflow-hidden sm:rounded-lg transition duration-150 ease-in-out">
+            <div class="px-4 py-5 sm:p-6">
+              <h3 class="text-lg leading-6 font-medium text-gray-900">8. How do you optimize SQL queries
+                for performance?</h3>
+              <div class="mt-1"> <span class="level-tag">Junior</span><span class="level-tag">Mid</span><span
+                  class="level-tag">Senior</span> </div>
+              <div class="mt-2 max-w-xl text-sm text-gray-500">
+                <p> <span class="font-medium">What Interviewers Look For:</span> Specific techniques
+                  (indexing, filtering early, avoiding SELECT *, query plans). </p>
+              </div>
+              <div class="mt-3 text-sm"> <a href="#"
+                  class="toggle-answer-btn font-medium text-blue-600 hover:text-blue-500"> View Sample
+                  Answer <span aria-hidden="true">→</span> </a> </div>
+              <div class="sample-answer hidden mt-3 pt-3 border-t border-gray-200 text-sm text-gray-600">
+                <p>Ensure appropriate indexes are created on columns used in WHERE clauses and JOIN
+                  conditions... [rest of answer]”</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="question-card hidden bg-white shadow overflow-hidden sm:rounded-lg transition duration-150 ease-in-out">
+            <div class="px-4 py-5 sm:p-6">
+              <h3 class="text-lg leading-6 font-medium text-gray-900">9. What is a data lake and how does
+                it complement a data warehouse?</h3>
+              <div class="mt-1"> <span class="level-tag">Mid</span><span class="level-tag">Senior</span>
+              </div>
+              <div class="mt-2 max-w-xl text-sm text-gray-500">
+                <p> <span class="font-medium">What Interviewers Look For:</span> Understanding the
+                  purpose and characteristics of each (raw vs. structured, schema-on-read vs.
+                  schema-on-write) and how they work together. </p>
+              </div>
+              <div class="mt-3 text-sm"> <a href="#"
+                  class="toggle-answer-btn font-medium text-blue-600 hover:text-blue-500"> View Sample
+                  Answer <span aria-hidden="true">→</span> </a> </div>
+              <div class="sample-answer hidden mt-3 pt-3 border-t border-gray-200 text-sm text-gray-600">
+                <p>A data lake is a centralized repository that stores vast amounts of raw data... [rest
+                  of answer]”</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="question-card hidden bg-white shadow overflow-hidden sm:rounded-lg transition duration-150 ease-in-out">
+            <div class="px-4 py-5 sm:p-6">
+              <h3 class="text-lg leading-6 font-medium text-gray-900">10. How do you handle schema
+                evolution in data pipelines?</h3>
+              <div class="mt-1"> <span class="level-tag">Mid</span><span class="level-tag">Senior</span>
+              </div>
+              <div class="mt-2 max-w-xl text-sm text-gray-500">
+                <p> <span class="font-medium">What Interviewers Look For:</span> Awareness of challenges
+                  (pipeline breaks) and solutions (schema registry, backward/forward compatibility,
+                  flexible parsing). </p>
+              </div>
+              <div class="mt-3 text-sm"> <a href="#"
+                  class="toggle-answer-btn font-medium text-blue-600 hover:text-blue-500"> View Sample
+                  Answer <span aria-hidden="true">→</span> </a> </div>
+              <div class="sample-answer hidden mt-3 pt-3 border-t border-gray-200 text-sm text-gray-600">
+                <p>Use a schema registry (like Avro Schema Registry with Kafka) to manage schema
+                  versions... [rest of answer]”</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="question-card hidden bg-white shadow overflow-hidden sm:rounded-lg transition duration-150 ease-in-out">
+            <div class="px-4 py-5 sm:p-6">
+              <h3 class="text-lg leading-6 font-medium text-gray-900">11. Describe a challenging data
+                engineering project and how you solved it.</h3>
+              <div class="mt-1"> <span class="level-tag">Mid</span><span class="level-tag">Senior</span>
+              </div>
+              <div class="mt-2 max-w-xl text-sm text-gray-500">
+                <p> <span class="font-medium">What Interviewers Look For:</span> STAR method (Situation,
+                  Task, Action, Result), problem-solving skills, technical depth, impact of solution.
+                </p>
+              </div>
+              <div class="mt-3 text-sm"> <a href="#"
+                  class="toggle-answer-btn font-medium text-blue-600 hover:text-blue-500"> View Sample
+                  Answer <span aria-hidden="true">→</span> </a> </div>
+              <div class="sample-answer hidden mt-3 pt-3 border-t border-gray-200 text-sm text-gray-600">
+                <p>Sample: “(Situation) In a previous role, we had a critical nightly batch pipeline...
+                  [rest of answer]”</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="question-card hidden bg-white shadow overflow-hidden sm:rounded-lg transition duration-150 ease-in-out">
+            <div class="px-4 py-5 sm:p-6">
+              <h3 class="text-lg leading-6 font-medium text-gray-900">12. What are the four Vs of Big
+                Data?</h3>
+              <div class="mt-1"> <span class="level-tag">Junior</span> </div>
+              <div class="mt-2 max-w-xl text-sm text-gray-500">
+                <p> <span class="font-medium">What Interviewers Look For:</span> Basic big data concepts
+                  understanding. </p>
+              </div>
+              <div class="mt-3 text-sm"> <a href="#"
+                  class="toggle-answer-btn font-medium text-blue-600 hover:text-blue-500"> View Sample
+                  Answer <span aria-hidden="true">→</span> </a> </div>
+              <div class="sample-answer hidden mt-3 pt-3 border-t border-gray-200 text-sm text-gray-600">
+                <p><strong>Volume:</strong> The sheer amount of data generated and
+                  stored.<br><strong>Velocity:</strong> The speed at which data is generated and needs
+                  to be processed.<br><strong>Variety:</strong> The different types of data
+                  (structured, semi-structured, unstructured).<br><strong>Veracity:</strong> The
+                  quality, accuracy, and trustworthiness of the data.</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="question-card hidden bg-white shadow overflow-hidden sm:rounded-lg transition duration-150 ease-in-out">
+            <div class="px-4 py-5 sm:p-6">
+              <h3 class="text-lg leading-6 font-medium text-gray-900">13. How do you ensure compliance
+                with data privacy regulations like GDPR?</h3>
+              <div class="mt-1"> <span class="level-tag">Mid</span><span class="level-tag">Senior</span>
+              </div>
+              <div class="mt-2 max-w-xl text-sm text-gray-500">
+                <p> <span class="font-medium">What Interviewers Look For:</span> Awareness of privacy
+                  concerns and technical controls (anonymization, encryption, access control). </p>
+              </div>
+              <div class="mt-3 text-sm"> <a href="#"
+                  class="toggle-answer-btn font-medium text-blue-600 hover:text-blue-500"> View Sample
+                  Answer <span aria-hidden="true">→</span> </a> </div>
+              <div class="sample-answer hidden mt-3 pt-3 border-t border-gray-200 text-sm text-gray-600">
+                <p>Implement techniques like data masking or anonymization for sensitive fields (PII)...
+                  [rest of answer]”</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="question-card hidden bg-white shadow overflow-hidden sm:rounded-lg transition duration-150 ease-in-out">
+            <div class="px-4 py-5 sm:p-6">
+              <h3 class="text-lg leading-6 font-medium text-gray-900">14. What is Hadoop and what are its
+                main components?</h3>
+              <div class="mt-1"> <span class="level-tag">Junior</span><span class="level-tag">Mid</span>
+              </div>
+              <div class="mt-2 max-w-xl text-sm text-gray-500">
+                <p> <span class="font-medium">What Interviewers Look For:</span> Foundational knowledge
+                  of the Hadoop ecosystem (HDFS, MapReduce, YARN). </p>
+              </div>
+              <div class="mt-3 text-sm"> <a href="#"
+                  class="toggle-answer-btn font-medium text-blue-600 hover:text-blue-500"> View Sample
+                  Answer <span aria-hidden="true">→</span> </a> </div>
+              <div class="sample-answer hidden mt-3 pt-3 border-t border-gray-200 text-sm text-gray-600">
+                <p>Hadoop is an open-source framework designed for distributed storage and processing...
+                  [rest of answer]”</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="question-card hidden bg-white shadow overflow-hidden sm:rounded-lg transition duration-150 ease-in-out">
+            <div class="px-4 py-5 sm:p-6">
+              <h3 class="text-lg leading-6 font-medium text-gray-900">15. How do you handle performance
+                bottlenecks in data pipelines?</h3>
+              <div class="mt-1"> <span class="level-tag">Mid</span><span class="level-tag">Senior</span>
+              </div>
+              <div class="mt-2 max-w-xl text-sm text-gray-500">
+                <p> <span class="font-medium">What Interviewers Look For:</span> Systematic
+                  troubleshooting approach (monitoring, optimization, scaling, caching). </p>
+              </div>
+              <div class="mt-3 text-sm"> <a href="#"
+                  class="toggle-answer-btn font-medium text-blue-600 hover:text-blue-500"> View Sample
+                  Answer <span aria-hidden="true">→</span> </a> </div>
+              <div class="sample-answer hidden mt-3 pt-3 border-t border-gray-200 text-sm text-gray-600">
+                <p>First, identify the bottleneck using monitoring tools... [rest of answer]”</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="question-card hidden bg-white shadow overflow-hidden sm:rounded-lg transition duration-150 ease-in-out">
+            <div class="px-4 py-5 sm:p-6">
+              <h3 class="text-lg leading-6 font-medium text-gray-900">16. What is data profiling and why
+                is it important?</h3>
+              <div class="mt-1"> <span class="level-tag">Mid</span> </div>
+              <div class="mt-2 max-w-xl text-sm text-gray-500">
+                <p> <span class="font-medium">What Interviewers Look For:</span> Understanding the
+                  process and its value in assessing data quality early. </p>
+              </div>
+              <div class="mt-3 text-sm"> <a href="#"
+                  class="toggle-answer-btn font-medium text-blue-600 hover:text-blue-500"> View Sample
+                  Answer <span aria-hidden="true">→</span> </a> </div>
+              <div class="sample-answer hidden mt-3 pt-3 border-t border-gray-200 text-sm text-gray-600">
+                <p>Data profiling is the process of examining data from an existing source... [rest of
+                  answer]”</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="question-card hidden bg-white shadow overflow-hidden sm:rounded-lg transition duration-150 ease-in-out">
+            <div class="px-4 py-5 sm:p-6">
+              <h3 class="text-lg leading-6 font-medium text-gray-900">17. How do you design a scalable
+                data pipeline?</h3>
+              <div class="mt-1"> <span class="level-tag">Mid</span><span class="level-tag">Senior</span>
+              </div>
+              <div class="mt-2 max-w-xl text-sm text-gray-500">
+                <p> <span class="font-medium">What Interviewers Look For:</span> Knowledge of
+                  distributed systems, partitioning, decoupling, and cloud services. </p>
+              </div>
+              <div class="mt-3 text-sm"> <a href="#"
+                  class="toggle-answer-btn font-medium text-blue-600 hover:text-blue-500"> View Sample
+                  Answer <span aria-hidden="true">→</span> </a> </div>
+              <div class="sample-answer hidden mt-3 pt-3 border-t border-gray-200 text-sm text-gray-600">
+                <p>Use distributed processing frameworks like Apache Spark or Flink... [rest of answer]”
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="question-card hidden bg-white shadow overflow-hidden sm:rounded-lg transition duration-150 ease-in-out">
+            <div class="px-4 py-5 sm:p-6">
+              <h3 class="text-lg leading-6 font-medium text-gray-900">18. What is your experience with
+                cloud data engineering?</h3>
+              <div class="mt-1"> <span class="level-tag">Junior</span><span class="level-tag">Mid</span><span
+                  class="level-tag">Senior</span> </div>
+              <div class="mt-2 max-w-xl text-sm text-gray-500">
+                <p> <span class="font-medium">What Interviewers Look For:</span> Specific cloud
+                  platforms (AWS, GCP, Azure) and services used (S3, Redshift, BigQuery, Glue, Data
+                  Factory etc.), and benefits realized. </p>
+              </div>
+              <div class="mt-3 text-sm"> <a href="#"
+                  class="toggle-answer-btn font-medium text-blue-600 hover:text-blue-500"> View Sample
+                  Answer <span aria-hidden="true">→</span> </a> </div>
+              <div class="sample-answer hidden mt-3 pt-3 border-t border-gray-200 text-sm text-gray-600">
+                <p>Sample: “I have primarily worked with AWS, building data pipelines that ingest data
+                  into S3 data lakes... [rest of answer]”</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="question-card hidden bg-white shadow overflow-hidden sm:rounded-lg transition duration-150 ease-in-out">
+            <div class="px-4 py-5 sm:p-6">
+              <h3 class="text-lg leading-6 font-medium text-gray-900">19. How do you stay updated with the
+                latest trends in data engineering?</h3>
+              <div class="mt-1"> <span class="level-tag">All Levels</span> </div>
+              <div class="mt-2 max-w-xl text-sm text-gray-500">
+                <p> <span class="font-medium">What Interviewers Look For:</span> Proactiveness in
+                  learning, specific resources mentioned (blogs, communities, courses). </p>
+              </div>
+              <div class="mt-3 text-sm"> <a href="#"
+                  class="toggle-answer-btn font-medium text-blue-600 hover:text-blue-500"> View Sample
+                  Answer <span aria-hidden="true">→</span> </a> </div>
+              <div class="sample-answer hidden mt-3 pt-3 border-t border-gray-200 text-sm text-gray-600">
+                <p>I subscribe to newsletters like Data Engineering Weekly... [rest of answer]”</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="question-card hidden bg-white shadow overflow-hidden sm:rounded-lg transition duration-150 ease-in-out">
+            <div class="px-4 py-5 sm:p-6">
+              <h3 class="text-lg leading-6 font-medium text-gray-900">20. How do you collaborate with
+                cross-functional teams?</h3>
+              <div class="mt-1"> <span class="level-tag">Mid</span><span class="level-tag">Senior</span>
+              </div>
+              <div class="mt-2 max-w-xl text-sm text-gray-500">
+                <p> <span class="font-medium">What Interviewers Look For:</span> Communication skills,
+                  understanding stakeholder needs, documentation practices. </p>
+              </div>
+              <div class="mt-3 text-sm"> <a href="#"
+                  class="toggle-answer-btn font-medium text-blue-600 hover:text-blue-500"> View Sample
+                  Answer <span aria-hidden="true">→</span> </a> </div>
+              <div class="sample-answer hidden mt-3 pt-3 border-t border-gray-200 text-sm text-gray-600">
+                <p>Sample: “Effective collaboration involves clear communication and understanding
+                  requirements... [rest of answer]”</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-10 text-center"> <button id="view-all-questions-btn"
+            class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+            View All 20+ Questions <i class="fas fa-arrow-down ml-2"></i> </button> </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- System Design Section -->
+  <div id="system-design" class="bg-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="lg:text-center">
+        <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">System Design</h2>
+        <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+          System Design Examples
+        </p>
+        <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+          Common data engineering system design challenges.
+        </p>
+      </div>
+      <div class="mt-10 space-y-8">
+        <!-- System Design Card 1 -->
+        <div class="system-design-card bg-gray-50 shadow overflow-hidden sm:rounded-lg p-6">
+          <h3 class="text-xl leading-6 font-semibold text-gray-900 mb-4">Design a Real-Time Analytics
+            Dashboard</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <h4 class="text-md font-medium text-gray-700 mb-2">Key Considerations:</h4>
+              <ul class="list-disc pl-5 text-sm text-gray-600 space-y-1">
+                <li>Data sources (e.g., web logs, application events)</li>
+                <li>Data ingestion method (e.g., Kafka, Kinesis, Pulsar)</li>
+                <li>Real-time processing engine (e.g., Spark Streaming, Flink, Kafka Streams)</li>
+                <li>Storage for aggregated results (e.g., Druid, ClickHouse, TimescaleDB)</li>
+                <li>Dashboarding tool (e.g., Superset, Grafana, Tableau)</li>
+                <li>Scalability, latency, fault tolerance requirements</li>
+                <li>Data consistency needs (at-least-once, exactly-once)</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-md font-medium text-gray-700 mb-2">High-Level Approach:</h4>
+              <ul class="list-disc pl-5 text-sm text-gray-600 space-y-1">
+                <li>Ingest raw events into a message queue (Kafka/Kinesis).</li>
+                <li>Use a stream processing engine (Flink/Spark Streaming) to consume events, perform
+                  aggregations (e.g., counts, sums over time windows).</li>
+                <li>Write aggregated results to a low-latency analytical database (Druid/ClickHouse).
+                </li>
+                <li>Connect the dashboarding tool to the analytical database for visualization.</li>
+                <li>Implement monitoring and alerting for pipeline health.</li>
+              </ul>
+              <p class="text-sm text-gray-500 mt-3 italic"></p>
+            </div>
+          </div>
+        </div>
+        <!-- System Design Card 2 -->
+        <div class="system-design-card bg-gray-50 shadow overflow-hidden sm:rounded-lg p-6">
+          <h3 class="text-xl leading-6 font-semibold text-gray-900 mb-4">Design a Recommendation System Data
+            Pipeline</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <h4 class="text-md font-medium text-gray-700 mb-2">Key Considerations:</h4>
+              <ul class="list-disc pl-5 text-sm text-gray-600 space-y-1">
+                <li>Input data (user interactions, item metadata, user profiles)</li>
+                <li>Batch vs. real-time recommendation needs</li>
+                <li>Feature engineering process</li>
+                <li>Model training approach (e.g., collaborative filtering, content-based)</li>
+                <li>Model serving mechanism (e.g., API, batch precomputation)</li>
+                <li>A/B testing framework for evaluating models</li>
+                <li>Scalability for users and items</li>
+                <li>Cold-start problem</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-md font-medium text-gray-700 mb-2">High-Level Approach:</h4>
+              <ul class="list-disc pl-5 text-sm text-gray-600 space-y-1">
+                <li>Collect interaction data (logs) into a data lake (S3/GCS).</li>
+                <li>Use batch processing (Spark) to clean data and generate features.</li>
+                <li>Train recommendation models (e.g., Spark MLlib, TensorFlow) periodically.</li>
+                <li>Store trained models or precomputed recommendations in a suitable store (e.g.,
+                  database, key-value store).</li>
+                <li>Expose recommendations via an API or load into serving layer.</li>
+                <li>Implement feedback loop to capture new interactions for model retraining.</li>
+              </ul>
+              <p class="text-sm text-gray-500 mt-3 italic"></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Skills Section -->
+      <div id="skills" class="bg-white py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
+          <div class="lg:text-center">
+            <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Skills</h2>
+            <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"> Key Skills
+              and Topics to Master </p>
+            <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto"> The essential toolkit for data engineers in
+              2025. </p>
+          </div>
+          <div class="mt-10">
+            <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
+              <div class="bg-gray-50 p-6 rounded-lg">
                 <div class="flex items-center">
-                    <div class="flex-shrink-0 flex items-center">
-                        <i class="fas fa-database text-blue-600 text-2xl mr-2"></i>
-                        <span class="text-xl font-bold text-gray-900">DataEngineerPrep</span>
-                    </div>
+                  <div class="flex-shrink-0 bg-blue-500 rounded-md p-3"> <i
+                      class="fas fa-database text-white text-xl"></i>
+                  </div>
+                  <div class="ml-5">
+                    <h3 class="text-lg font-medium text-gray-900">SQL Mastery</h3>
+                    <div class="mt-1"> <span class="level-tag">Junior</span><span class="level-tag">Mid</span><span
+                        class="level-tag">Senior</span> </div>
+                  </div>
                 </div>
-                <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
-                    <a href="#resources"
-                        class="nav-link border-transparent text-gray-500 hover:border-blue-500 hover:text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Resources</a>
-                    <a href="#questions"
-                        class="nav-link border-transparent text-gray-500 hover:border-blue-500 hover:text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Questions</a>
-
-                    <a href="#system-design"
-                        class="nav-link border-transparent text-gray-500 hover:border-blue-500 hover:text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">System
-                        Design</a>
-                    <a href="#skills"
-                        class="nav-link border-transparent text-gray-500 hover:border-blue-500 hover:text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Skills</a>
-                    <a href="#tips"
-                        class="nav-link border-transparent text-gray-500 hover:border-blue-500 hover:text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Tips</a>
+                <div class="mt-2">
+                  <p class="text-sm text-gray-600"> Joins, CTEs, window functions, query optimization. The
+                    foundation of data manipulation. </p>
                 </div>
-                <div class="hidden sm:ml-6 sm:flex sm:items-center">
-                    <a href="#newsletter"
-                        class="ml-8 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-                        Get Updates
-                    </a>
+                <div class="mt-4">
+                  <div class="flex flex-wrap gap-2"> <span
+                      class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                      Advanced Queries </span> <span
+                      class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                      Performance Tuning </span> </div>
                 </div>
-                <div class="-mr-2 flex items-center sm:hidden">
-                    <button type="button" id="mobile-menu-button"
-                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
-                        aria-controls="mobile-menu" aria-expanded="false">
-                        <span class="sr-only">Open main menu</span>
-                        <i class="fas fa-bars"></i>
-                    </button>
+              </div>
+              <div class="bg-gray-50 p-6 rounded-lg">
+                <div class="flex items-center">
+                  <div class="flex-shrink-0 bg-green-500 rounded-md p-3"> <i
+                      class="fas fa-project-diagram text-white text-xl"></i> </div>
+                  <div class="ml-5">
+                    <h3 class="text-lg font-medium text-gray-900">Data Modeling</h3>
+                    <div class="mt-1"> <span class="level-tag">Mid</span><span class="level-tag">Senior</span> </div>
+                  </div>
                 </div>
+                <div class="mt-2">
+                  <p class="text-sm text-gray-600"> Star/snowflake schemas, normalization, denormalization.
+                    Designing efficient data structures. </p>
+                </div>
+                <div class="mt-4">
+                  <div class="flex flex-wrap gap-2"> <span
+                      class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                      Warehouse Design </span> <span
+                      class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                      Schema Patterns </span> </div>
+                </div>
+              </div>
+              <div class="bg-gray-50 p-6 rounded-lg">
+                <div class="flex items-center">
+                  <div class="flex-shrink-0 bg-purple-500 rounded-md p-3"> <i
+                      class="fas fa-code-branch text-white text-xl"></i> </div>
+                  <div class="ml-5">
+                    <h3 class="text-lg font-medium text-gray-900">ETL/ELT Pipelines</h3>
+                    <div class="mt-1"> <span class="level-tag">Junior</span><span class="level-tag">Mid</span><span
+                        class="level-tag">Senior</span> </div>
+                  </div>
+                </div>
+                <div class="mt-2">
+                  <p class="text-sm text-gray-600"> Design, testing, scaling, and maintenance. The core of
+                    data engineering workflows. </p>
+                </div>
+                <div class="mt-4">
+                  <div class="flex flex-wrap gap-2"> <span
+                      class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-purple-100 text-purple-800">
+                      Airflow </span> <span
+                      class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-purple-100 text-purple-800">
+                      Data Integration </span> </div>
+                </div>
+              </div>
+              <div class="bg-gray-50 p-6 rounded-lg">
+                <div class="flex items-center">
+                  <div class="flex-shrink-0 bg-yellow-500 rounded-md p-3"> <i
+                      class="fab fa-python text-white text-xl"></i>
+                  </div>
+                  <div class="ml-5">
+                    <h3 class="text-lg font-medium text-gray-900">Programming</h3>
+                    <div class="mt-1"> <span class="level-tag">Junior</span><span class="level-tag">Mid</span><span
+                        class="level-tag">Senior</span> </div>
+                  </div>
+                </div>
+                <div class="mt-2">
+                  <p class="text-sm text-gray-600"> Python (Pandas, NumPy, PySpark), Scala, or Java. Essential
+                    for custom solutions and automation. </p>
+                </div>
+                <div class="mt-4">
+                  <div class="flex flex-wrap gap-2"> <span
+                      class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">
+                      Python </span> <span
+                      class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">
+                      PySpark </span> </div>
+                </div>
+              </div>
+              <div class="bg-gray-50 p-6 rounded-lg">
+                <div class="flex items-center">
+                  <div class="flex-shrink-0 bg-red-500 rounded-md p-3"> <i class="fas fa-cloud text-white text-xl"></i>
+                  </div>
+                  <div class="ml-5">
+                    <h3 class="text-lg font-medium text-gray-900">Cloud Platforms</h3>
+                    <div class="mt-1"> <span class="level-tag">Junior</span><span class="level-tag">Mid</span><span
+                        class="level-tag">Senior</span> </div>
+                  </div>
+                </div>
+                <div class="mt-2">
+                  <p class="text-sm text-gray-600"> AWS (Redshift, Glue), GCP (BigQuery, Dataflow), Azure
+                    (Data Factory). The modern data stack. </p>
+                </div>
+                <div class="mt-4">
+                  <div class="flex flex-wrap gap-2"> <span
+                      class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">
+                      AWS </span> <span
+                      class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">
+                      GCP </span> <span
+                      class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">
+                      Azure </span> </div>
+                </div>
+              </div>
+              <div class="bg-gray-50 p-6 rounded-lg">
+                <div class="flex items-center">
+                  <div class="flex-shrink-0 bg-indigo-500 rounded-md p-3"> <i
+                      class="fas fa-chart-line text-white text-xl"></i> </div>
+                  <div class="ml-5">
+                    <h3 class="text-lg font-medium text-gray-900">Data Quality</h3>
+                    <div class="mt-1"> <span class="level-tag">Mid</span><span class="level-tag">Senior</span> </div>
+                  </div>
+                </div>
+                <div class="mt-2">
+                  <p class="text-sm text-gray-600"> Data validation frameworks (Great Expectations), logging,
+                    and alerting. Ensuring reliable data. </p>
+                </div>
+                <div class="mt-4">
+                  <div class="flex flex-wrap gap-2"> <span
+                      class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800">
+                      Validation </span> <span
+                      class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800">
+                      Monitoring </span> </div>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
-        <div class="hidden sm:hidden" id="mobile-menu">
-            <div class="pt-2 pb-3 space-y-1">
-                <a href="#resources"
-                    class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700">Resources</a>
-                <a href="#questions"
-                    class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700">Questions</a>
-                <a href="#system-design"
-                    class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700">System
-                    Design</a>
-                <a href="#skills"
-                    class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700">Skills</a>
-                <a href="#tips"
-                    class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700">Tips</a>
-                <a href="#newsletter"
-                    class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700">Get
-                    Updates</a>
-            </div>
-        </div>
-    </nav>
+      </div>
 
-    <!-- Hero Section -->
-    <div class="gradient-bg">
-        <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <h1 class="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl"> <span
-                        class="block">Crack Your</span> <span class="block">Data Engineering Interview</span> </h1>
-                <p
-                    class="mt-3 max-w-md mx-auto text-base text-blue-200 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl hero-subtitle-shadow">
-                    The ultimate 2025 guide with curated resources, interview questions, and practical tips to land your
-                    dream data engineering job. </p>
-                <div class="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
-                    <div class="rounded-md shadow"> <a href="#resources"
-                            class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-700 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10">
-                            Explore Resources </a> </div>
-                    <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3"> <a href="#questions"
-                            class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 bg-opacity-60 hover:bg-opacity-70 md:py-4 md:text-lg md:px-10">
-                            See Questions </a> </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Stats Section -->
-    <div class="bg-white py-12">
+      <!-- Tips Section -->
+      <div id="tips" class="bg-white py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="lg:text-center">
-                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Why This Guide</h2>
-                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"> Data
-                    Engineering in 2025 </p>
-                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto"> The field is evolving rapidly. Here's what
-                    you need to know. </p>
-            </div>
-            <div class="mt-10">
-                <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
-                    <div class="bg-white overflow-hidden shadow rounded-lg">
-                        <div class="px-4 py-5 sm:p-6">
-                            <div class="flex items-center">
-                                <div class="flex-shrink-0 bg-blue-500 rounded-md p-3"> <i
-                                        class="fas fa-book text-white text-xl"></i> </div>
-                                <div class="ml-5 w-0 flex-1">
-                                    <dt class="text-sm font-medium text-gray-500 truncate"> Essential Books </dt>
-                                    <dd class="flex items-baseline">
-                                        <div class="text-2xl font-semibold text-gray-900"> 7+ </div>
-                                    </dd>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-white overflow-hidden shadow rounded-lg">
-                        <div class="px-4 py-5 sm:p-6">
-                            <div class="flex items-center">
-                                <div class="flex-shrink-0 bg-green-500 rounded-md p-3"> <i
-                                        class="fas fa-graduation-cap text-white text-xl"></i> </div>
-                                <div class="ml-5 w-0 flex-1">
-                                    <dt class="text-sm font-medium text-gray-500 truncate"> Courses & Certs </dt>
-                                    <dd class="flex items-baseline">
-                                        <div class="text-2xl font-semibold text-gray-900"> 10+ </div>
-                                    </dd>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-white overflow-hidden shadow rounded-lg">
-                        <div class="px-4 py-5 sm:p-6">
-                            <div class="flex items-center">
-                                <div class="flex-shrink-0 bg-purple-500 rounded-md p-3"> <i
-                                        class="fas fa-question-circle text-white text-xl"></i> </div>
-                                <div class="ml-5 w-0 flex-1">
-                                    <dt class="text-sm font-medium text-gray-500 truncate"> Key Questions </dt>
-                                    <dd class="flex items-baseline">
-                                        <div class="text-2xl font-semibold text-gray-900"> 20+ </div>
-                                    </dd>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-white overflow-hidden shadow rounded-lg">
-                        <div class="px-4 py-5 sm:p-6">
-                            <div class="flex items-center">
-                                <div class="flex-shrink-0 bg-yellow-500 rounded-md p-3"> <i
-                                        class="fas fa-tools text-white text-xl"></i> </div>
-                                <div class="ml-5 w-0 flex-1">
-                                    <dt class="text-sm font-medium text-gray-500 truncate"> Must-Know Tools </dt>
-                                    <dd class="flex items-baseline">
-                                        <div class="text-2xl font-semibold text-gray-900"> 15+ </div>
-                                    </dd>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+          <div class="lg:text-center">
+            <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Tips</h2>
+            <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"> Practical
+              Tips for Success </p>
+            <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto"> Actionable advice to help you stand out in
+              interviews. </p>
+          </div>
+          <div class="mt-10">
+            <div class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
+              <div class="relative">
+                <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
+                  <i class="fas fa-laptop-code text-xl"></i>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Resources Section -->
-    <div id="resources" class="bg-gray-50 py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="lg:text-center">
-                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Resources</h2>
-                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"> Essential
-                    Learning Resources </p>
-                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto"> Curated books, courses, and communities to
-                    master data engineering. </p>
-            </div>
-            <div class="mt-10">
-                <div class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
-                    <div class="relative">
-                        <div
-                            class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
-                            <i class="fas fa-book text-xl"></i>
-                        </div>
-                        <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Books</p>
-                        <div class="mt-2 ml-16 text-base text-gray-500">
-                            <ul class="list-disc pl-5 space-y-2">
-                                <li><span class="font-medium"><a href="https://dataintensive.net" target="_blank"
-                                            rel="noopener noreferrer"
-                                            class="text-blue-600 hover:text-blue-800 hover:underline">Designing
-                                            Data-Intensive Applications</a></span> by Martin Kleppmann</li>
-                                <li><span class="font-medium"><a
-                                            href="https://www.oreilly.com/library/view/fundamentals-of-data/9781098108308/"
-                                            target="_blank" rel="noopener noreferrer"
-                                            class="text-blue-600 hover:text-blue-800 hover:underline">Fundamentals of
-                                            Data Engineering</a></span> by Joe Reis and Matt Housley</li>
-                                <li><span class="font-medium"><a
-                                            href="https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/books/data-warehouse-dw-toolkit/"
-                                            target="_blank" rel="noopener noreferrer"
-                                            class="text-blue-600 hover:text-blue-800 hover:underline">The Data Warehouse
-                                            Toolkit</a></span> by Ralph Kimball</li>
-                                <li><span class="font-medium"><a
-                                            href="https://www.oreilly.com/library/view/spark-the-definitive/9781491912201/"
-                                            target="_blank" rel="noopener noreferrer"
-                                            class="text-blue-600 hover:text-blue-800 hover:underline">Spark: The
-                                            Definitive Guide</a></span> by Bill Chambers</li>
-                                <li><span class="font-medium"><a
-                                            href="https://www.packtpub.com/product/data-engineering-with-python/9781801818076"
-                                            target="_blank" rel="noopener noreferrer"
-                                            class="text-blue-600 hover:text-blue-800 hover:underline">Data Engineering
-                                            with Python</a></span> by Paul Crickard</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="relative">
-                        <div
-                            class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-green-500 text-white">
-                            <i class="fas fa-graduation-cap text-xl"></i>
-                        </div>
-                        <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Courses & Certifications</p>
-                        <div class="mt-2 ml-16 text-base text-gray-500">
-                            <ul class="list-disc pl-5 space-y-2">
-                                <li><span class="font-medium"><a
-                                            href="https://www.datacamp.com/certification/data-engineer" target="_blank"
-                                            rel="noopener noreferrer"
-                                            class="text-blue-600 hover:text-blue-800 hover:underline">DataCamp Data
-                                            Engineer Career Track</a></span> (Python, SQL, Airflow)</li>
-                                <li><span class="font-medium"><a
-                                            href="https://cloud.google.com/learn/certification/data-engineer"
-                                            target="_blank" rel="noopener noreferrer"
-                                            class="text-blue-600 hover:text-blue-800 hover:underline">Google
-                                            Professional Data Engineer</a></span> certification</li>
-                                <li><span class="font-medium"><a
-                                            href="https://aws.amazon.com/certification/certified-data-engineer-associate/"
-                                            target="_blank" rel="noopener noreferrer"
-                                            class="text-blue-600 hover:text-blue-800 hover:underline">AWS Certified Data
-                                            Engineer – Associate</a></span></li>
-                                <li><span class="font-medium"><a
-                                            href="https://learn.microsoft.com/en-us/training/courses/dp-203t00"
-                                            target="_blank" rel="noopener noreferrer"
-                                            class="text-blue-600 hover:text-blue-800 hover:underline">Microsoft Azure
-                                            Data Engineer Associate</a></span></li>
-                                <li><span class="font-medium"><a
-                                            href="https://dataengineeracademy.com/courses/sql-tutorial-free/"
-                                            target="_blank" rel="noopener noreferrer"
-                                            class="text-blue-600 hover:text-blue-800 hover:underline">Free SQL
-                                            Course</a></span> by Data Engineer Academy</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="relative">
-                        <div
-                            class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-red-500 text-white">
-                            <i class="fab fa-youtube text-xl"></i>
-                        </div>
-                        <p class="ml-16 text-lg leading-6 font-medium text-gray-900">YouTube Channels</p>
-                        <div class="mt-2 ml-16 text-base text-gray-500">
-                            <ul class="list-disc pl-5 space-y-2">
-                                <li><span class="font-medium"><a href="https://www.youtube.com/@DataEngineerOne"
-                                            target="_blank" rel="noopener noreferrer"
-                                            class="text-blue-600 hover:text-blue-800 hover:underline">Data Engineer
-                                            One</a></span> - Real-world projects, Airflow, AWS</li>
-                                <li><span class="font-medium"><a href="https://www.youtube.com/@SeattleDataGuy"
-                                            target="_blank" rel="noopener noreferrer"
-                                            class="text-blue-600 hover:text-blue-800 hover:underline">Seattle Data
-                                            Guy</a></span> - Career advice & industry trends</li>
-                                <li><span class="font-medium"><a href="https://www.youtube.com/@datasciencedojo"
-                                            target="_blank" rel="noopener noreferrer"
-                                            class="text-blue-600 hover:text-blue-800 hover:underline">Data Science
-                                            Dojo</a></span> - SQL & cloud computing tutorials</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="relative">
-                        <div
-                            class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-purple-500 text-white">
-                            <i class="fas fa-users text-xl"></i>
-                        </div>
-                        <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Websites & Communities</p>
-                        <div class="mt-2 ml-16 text-base text-gray-500">
-                            <ul class="list-disc pl-5 space-y-2">
-                                <li><span class="font-medium"><a href="https://datatalks.club" target="_blank"
-                                            rel="noopener noreferrer"
-                                            class="text-blue-600 hover:text-blue-800 hover:underline">DataTalks.Club</a></span>
-                                    - Community-driven resources</li>
-                                <li><span class="font-medium"><a href="https://www.reddit.com/r/dataengineering/"
-                                            target="_blank" rel="noopener noreferrer"
-                                            class="text-blue-600 hover:text-blue-800 hover:underline">Reddit
-                                            r/dataengineering</a></span> - Peer advice & book recs</li>
-                                <li><span class="font-medium"><a href="https://dataengineeracademy.com" target="_blank"
-                                            rel="noopener noreferrer"
-                                            class="text-blue-600 hover:text-blue-800 hover:underline">Data Engineer
-                                            Academy</a></span> - Free courses & projects</li>
-                            </ul>
-                        </div>
-                    </div>
+                <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Build a Portfolio</p>
+                <div class="mt-2 ml-16 text-base text-gray-500">
+                  <p> Showcase end-to-end projects (data ingestion, transformation, storage, and analytics)
+                    using real datasets. GitHub repositories with well-documented projects are gold. </p>
                 </div>
-            </div>
-            <div class="mt-16">
-                <h3 class="text-2xl font-bold text-gray-900 text-center mb-8">Useful Free Resources</h3>
-                <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-                    <div
-                        class="resource-card bg-white overflow-hidden shadow rounded-lg transition duration-300 ease-in-out p-5 flex flex-col text-center h-full">
-                        <div class="flex-grow">
-                            <div class="mb-3 inline-block"> <i class="fas fa-list-check text-blue-500 text-3xl"></i>
-                            </div>
-                            <h4 class="text-md font-semibold text-gray-900 mb-2">SQL Must Do List</h4>
-                            <p class="text-sm text-gray-600 mb-4"> Essential SQL patterns every DE needs.</p>
-                        </div> <a href="https://topmate.io/sathyaanand/1495112" target="_blank"
-                            rel="noopener noreferrer"
-                            class="text-sm font-medium text-blue-600 hover:text-blue-800 hover:underline mt-auto pt-2">Get
-                            Resource →</a>
-                    </div>
-                    <div
-                        class="resource-card bg-white overflow-hidden shadow rounded-lg transition duration-300 ease-in-out p-5 flex flex-col text-center h-full">
-                        <div class="flex-grow">
-                            <div class="mb-3 inline-block"> <i class="fas fa-code text-green-500 text-3xl"></i> </div>
-                            <h4 class="text-md font-semibold text-gray-900 mb-2">Leetcode SQL Solutions</h4>
-                            <p class="text-sm text-gray-600 mb-4"> Practice common SQL interview questions.</p>
-                        </div> <a href="https://topmate.io/sathyaanand/1441925" target="_blank"
-                            rel="noopener noreferrer"
-                            class="text-sm font-medium text-green-600 hover:text-green-800 hover:underline mt-auto pt-2">Get
-                            Solutions →</a>
-                    </div>
-                    <div
-                        class="resource-card bg-white overflow-hidden shadow rounded-lg transition duration-300 ease-in-out p-5 flex flex-col text-center h-full">
-                        <div class="flex-grow">
-                            <div class="mb-3 inline-block"> <i class="fab fa-python text-yellow-500 text-3xl"></i>
-                            </div>
-                            <h4 class="text-md font-semibold text-gray-900 mb-2">Python Leetcode Solutions</h4>
-                            <p class="text-sm text-gray-600 mb-4"> Python solutions for coding interviews.</p>
-                        </div> <a href="https://topmate.io/sathyaanand/1439710" target="_blank"
-                            rel="noopener noreferrer"
-                            class="text-sm font-medium text-yellow-600 hover:text-yellow-800 hover:underline mt-auto pt-2">Get
-                            Solutions →</a>
-                    </div>
-                    <div
-                        class="resource-card bg-white overflow-hidden shadow rounded-lg transition duration-300 ease-in-out p-5 flex flex-col text-center h-full">
-                        <div class="flex-grow">
-                            <div class="mb-3 inline-block"> <i class="fas fa-briefcase text-purple-500 text-3xl"></i>
-                            </div>
-                            <h4 class="text-md font-semibold text-gray-900 mb-2">Work Anywhere - 500+ Jobs</h4>
-                            <p class="text-sm text-gray-600 mb-4"> Curated list of remote job opportunities.</p>
-                        </div> <a href="https://topmate.io/sathyaanand/1422931" target="_blank"
-                            rel="noopener noreferrer"
-                            class="text-sm font-medium text-purple-600 hover:text-purple-800 hover:underline mt-auto pt-2">Find
-                            Jobs →</a>
-                    </div>
+              </div>
+              <div class="relative">
+                <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-green-500 text-white">
+                  <i class="fas fa-comments text-xl"></i>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Top Recommended Paid Resources -->
-    <div class="bg-white py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-extrabold text-gray-900 mb-8">Top Recommended Paid Resources</h2>
-            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"> <a href="https://dataintensive.net/"
-                    target="_blank" rel="noopener noreferrer"
-                    class="block resource-card bg-white overflow-hidden shadow rounded-lg transition duration-300 ease-in-out no-underline hover:no-underline focus:no-underline active:no-underline">
-                    <div class="px-4 py-5 sm:p-6 h-full flex flex-col justify-between">
-                        <div>
-                            <div class="flex items-center">
-                                <div class="flex-shrink-0 bg-blue-100 rounded-md p-3"> <i
-                                        class="fas fa-book text-blue-600 text-xl"></i> </div>
-                                <div class="ml-5 w-0 flex-1">
-                                    <h3 class="text-lg font-medium text-gray-900">Designing Data-Intensive Applications
-                                    </h3>
-                                    <p class="mt-1 text-sm text-gray-500">Martin Kleppmann</p>
-                                </div>
-                            </div>
-                            <div class="mt-4">
-                                <p class="text-sm text-gray-600"> Deep dive into distributed systems, data modeling, and
-                                    stream processing. Essential for understanding modern data architectures. </p>
-                            </div>
-                        </div>
-                        <div class="mt-4"> <span
-                                class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
-                                Must Read </span> </div>
-                    </div>
-                </a> <a href="https://www.datacamp.com/tracks/data-engineer-with-python" target="_blank"
-                    rel="noopener noreferrer"
-                    class="block resource-card bg-white overflow-hidden shadow rounded-lg transition duration-300 ease-in-out no-underline hover:no-underline focus:no-underline active:no-underline">
-                    <div class="px-4 py-5 sm:p-6 h-full flex flex-col justify-between">
-                        <div>
-                            <div class="flex items-center">
-                                <div class="flex-shrink-0 bg-green-100 rounded-md p-3"> <i
-                                        class="fas fa-graduation-cap text-green-600 text-xl"></i> </div>
-                                <div class="ml-5 w-0 flex-1">
-                                    <h3 class="text-lg font-medium text-gray-900">DataCamp Data Engineer Track</h3>
-                                    <p class="mt-1 text-sm text-gray-500">Interactive Learning</p>
-                                </div>
-                            </div>
-                            <div class="mt-4">
-                                <p class="text-sm text-gray-600"> Comprehensive track covering Python, SQL, Airflow, and
-                                    Git with hands-on exercises. Great for building practical skills. </p>
-                            </div>
-                        </div>
-                        <div class="mt-4"> <span
-                                class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                                Popular </span> </div>
-                    </div>
-                </a> <a href="https://cloud.google.com/learn/certification/data-engineer" target="_blank"
-                    rel="noopener noreferrer"
-                    class="block resource-card bg-white overflow-hidden shadow rounded-lg transition duration-300 ease-in-out no-underline hover:no-underline focus:no-underline active:no-underline">
-                    <div class="px-4 py-5 sm:p-6 h-full flex flex-col justify-between">
-                        <div>
-                            <div class="flex items-center">
-                                <div class="flex-shrink-0 bg-purple-100 rounded-md p-3"> <i
-                                        class="fas fa-certificate text-purple-600 text-xl"></i> </div>
-                                <div class="ml-5 w-0 flex-1">
-                                    <h3 class="text-lg font-medium text-gray-900">Google Professional Data Engineer</h3>
-                                    <p class="mt-1 text-sm text-gray-500">Cloud Certification</p>
-                                </div>
-                            </div>
-                            <div class="mt-4">
-                                <p class="text-sm text-gray-600"> Validates skills in designing and managing data
-                                    systems on Google Cloud. Highly valued by employers in 2025. </p>
-                            </div>
-                        </div>
-                        <div class="mt-4"> <span
-                                class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-purple-100 text-purple-800">
-                                Industry Standard </span> </div>
-                    </div>
-                </a> </div>
-        </div>
-    </div>
-
-    <!-- Interview Questions Section -->
-    <div id="questions" class="bg-gray-50 py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="lg:text-center">
-                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Interview Prep</h2>
-                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"> Most-Asked
-                    Data Engineering Interview Questions </p>
-                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto"> Be prepared for these common questions in
-                    2025 interviews. </p>
-            </div>
-            <div class="mt-10">
-                <div id="questions-list" class="space-y-4">
-                    <div
-                        class="question-card bg-white shadow overflow-hidden sm:rounded-lg transition duration-150 ease-in-out">
-                        <div class="px-4 py-5 sm:p-6">
-                            <h3 class="text-lg leading-6 font-medium text-gray-900">1. What is the difference between
-                                structured, semi-structured, and unstructured data?</h3>
-                            <div class="mt-1"> <span class="level-tag">Junior</span><span class="level-tag">Mid</span>
-                            </div>
-                            <div class="mt-2 max-w-xl text-sm text-gray-500">
-                                <p> <span class="font-medium">What Interviewers Look For:</span> Understanding of data
-                                    organization levels and examples (tables, JSON/XML, text/images). </p>
-                            </div>
-                            <div class="mt-3 text-sm"> <a href="#"
-                                    class="toggle-answer-btn font-medium text-blue-600 hover:text-blue-500"> View Sample
-                                    Answer <span aria-hidden="true">→</span> </a> </div>
-                            <div class="sample-answer hidden mt-3 pt-3 border-t border-gray-200 text-sm text-gray-600">
-                                <p>Structured data is highly organized and stored in tabular formats (e.g., relational
-                                    databases). Semi-structured data has some organizational properties but doesn’t fit
-                                    into tables (e.g., JSON, XML). Unstructured data lacks a predefined format (e.g.,
-                                    text, images, videos).</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="question-card bg-white shadow overflow-hidden sm:rounded-lg transition duration-150 ease-in-out">
-                        <div class="px-4 py-5 sm:p-6">
-                            <h3 class="text-lg leading-6 font-medium text-gray-900">2. Explain the concept of a data
-                                pipeline and its role in data engineering.</h3>
-                            <div class="mt-1"> <span class="level-tag">Junior</span><span class="level-tag">Mid</span>
-                            </div>
-                            <div class="mt-2 max-w-xl text-sm text-gray-500">
-                                <p> <span class="font-medium">What Interviewers Look For:</span> Understanding of
-                                    ETL/ELT, automation, data movement, and purpose (warehousing, analytics). </p>
-                            </div>
-                            <div class="mt-3 text-sm"> <a href="#"
-                                    class="toggle-answer-btn font-medium text-blue-600 hover:text-blue-500"> View Sample
-                                    Answer <span aria-hidden="true">→</span> </a> </div>
-                            <div class="sample-answer hidden mt-3 pt-3 border-t border-gray-200 text-sm text-gray-600">
-                                <p>A data pipeline automates the extraction, transformation, and loading (ETL/ELT) of
-                                    data from various sources to destinations like data warehouses or lakes, ensuring
-                                    efficient and reliable data movement for analysis or operations.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="question-card bg-white shadow overflow-hidden sm:rounded-lg transition duration-150 ease-in-out">
-                        <div class="px-4 py-5 sm:p-6">
-                            <h3 class="text-lg leading-6 font-medium text-gray-900">3. What are the main design schemas
-                                used in data modeling?</h3>
-                            <div class="mt-1"> <span class="level-tag">Mid</span> </div>
-                            <div class="mt-2 max-w-xl text-sm text-gray-500">
-                                <p> <span class="font-medium">What Interviewers Look For:</span> Knowledge of Star,
-                                    Snowflake, and Galaxy schemas and their characteristics. </p>
-                            </div>
-                            <div class="mt-3 text-sm"> <a href="#"
-                                    class="toggle-answer-btn font-medium text-blue-600 hover:text-blue-500"> View Sample
-                                    Answer <span aria-hidden="true">→</span> </a> </div>
-                            <div class="sample-answer hidden mt-3 pt-3 border-t border-gray-200 text-sm text-gray-600">
-                                <p>The three primary schemas are:<br><strong>Star schema:</strong> Central fact table
-                                    linked directly to dimension tables (denormalized). Simple and fast for
-                                    queries.<br><strong>Snowflake schema:</strong> Extension of star schema where
-                                    dimension tables are normalized into multiple related tables. Saves space but
-                                    queries are more complex.<br><strong>Galaxy schema (Fact Constellation):</strong>
-                                    Multiple fact tables sharing dimension tables. Used for complex scenarios.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="question-card bg-white shadow overflow-hidden sm:rounded-lg transition duration-150 ease-in-out">
-                        <div class="px-4 py-5 sm:p-6">
-                            <h3 class="text-lg leading-6 font-medium text-gray-900">4. How do you handle duplicate data
-                                points in SQL?</h3>
-                            <div class="mt-1"> <span class="level-tag">Junior</span><span class="level-tag">Mid</span>
-                            </div>
-                            <div class="mt-2 max-w-xl text-sm text-gray-500">
-                                <p> <span class="font-medium">What Interviewers Look For:</span> Practical SQL knowledge
-                                    (DISTINCT, GROUP BY, ROW_NUMBER). </p>
-                            </div>
-                            <div class="mt-3 text-sm"> <a href="#"
-                                    class="toggle-answer-btn font-medium text-blue-600 hover:text-blue-500"> View Sample
-                                    Answer <span aria-hidden="true">→</span> </a> </div>
-                            <div class="sample-answer hidden mt-3 pt-3 border-t border-gray-200 text-sm text-gray-600">
-                                <p>Several methods can be used:<br>• Use `SELECT DISTINCT column1, column2 FROM table;`
-                                    to retrieve unique rows.<br>• Use `GROUP BY` clause on all relevant columns combined
-                                    with aggregate functions (like MIN, MAX) if needed.<br>• Use window functions like
-                                    `ROW_NUMBER()` partitioned by the columns that define uniqueness, then filter where
-                                    the row number is 1.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="question-card bg-white shadow overflow-hidden sm:rounded-lg transition duration-150 ease-in-out">
-                        <div class="px-4 py-5 sm:p-6">
-                            <h3 class="text-lg leading-6 font-medium text-gray-900">5. What is data lineage and why is
-                                it important?</h3>
-                            <div class="mt-1"> <span class="level-tag">Mid</span><span class="level-tag">Senior</span>
-                            </div>
-                            <div class="mt-2 max-w-xl text-sm text-gray-500">
-                                <p> <span class="font-medium">What Interviewers Look For:</span> Understanding the
-                                    concept and its importance for debugging, trust, compliance, and impact analysis.
-                                </p>
-                            </div>
-                            <div class="mt-3 text-sm"> <a href="#"
-                                    class="toggle-answer-btn font-medium text-blue-600 hover:text-blue-500"> View Sample
-                                    Answer <span aria-hidden="true">→</span> </a> </div>
-                            <div class="sample-answer hidden mt-3 pt-3 border-t border-gray-200 text-sm text-gray-600">
-                                <p>Data lineage tracks the origin, movement, and transformation of data throughout its
-                                    lifecycle. It's crucial for understanding data sources, troubleshooting pipeline
-                                    issues, ensuring data quality, performing impact analysis of changes, and meeting
-                                    regulatory compliance requirements (like GDPR).</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="question-card hidden bg-white shadow overflow-hidden sm:rounded-lg transition duration-150 ease-in-out">
-                        <div class="px-4 py-5 sm:p-6">
-                            <h3 class="text-lg leading-6 font-medium text-gray-900">6. How do you ensure data quality
-                                and integrity in a pipeline?</h3>
-                            <div class="mt-1"> <span class="level-tag">Mid</span><span class="level-tag">Senior</span>
-                            </div>
-                            <div class="mt-2 max-w-xl text-sm text-gray-500">
-                                <p> <span class="font-medium">What Interviewers Look For:</span> Knowledge of specific
-                                    techniques (validation, deduplication, checks) and tools (e.g., Great Expectations).
-                                </p>
-                            </div>
-                            <div class="mt-3 text-sm"> <a href="#"
-                                    class="toggle-answer-btn font-medium text-blue-600 hover:text-blue-500"> View Sample
-                                    Answer <span aria-hidden="true">→</span> </a> </div>
-                            <div class="sample-answer hidden mt-3 pt-3 border-t border-gray-200 text-sm text-gray-600">
-                                <p>Implement validation checks at various stages (e.g., null checks, type checks, range
-                                    checks), use deduplication techniques, enforce schema consistency, implement data
-                                    profiling, set up monitoring and alerting for anomalies, and potentially use data
-                                    quality frameworks like Great Expectations or dbt tests.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="question-card hidden bg-white shadow overflow-hidden sm:rounded-lg transition duration-150 ease-in-out">
-                        <div class="px-4 py-5 sm:p-6">
-                            <h3 class="text-lg leading-6 font-medium text-gray-900">7. What is your experience with ETL
-                                tools? Which do you prefer and why?</h3>
-                            <div class="mt-1"> <span class="level-tag">Mid</span><span class="level-tag">Senior</span>
-                            </div>
-                            <div class="mt-2 max-w-xl text-sm text-gray-500">
-                                <p> <span class="font-medium">What Interviewers Look For:</span> Familiarity with
-                                    popular tools (Airflow, Spark, Glue, Data Factory, dbt), ability to articulate
-                                    pros/cons based on use cases. </p>
-                            </div>
-                            <div class="mt-3 text-sm"> <a href="#"
-                                    class="toggle-answer-btn font-medium text-blue-600 hover:text-blue-500"> View Sample
-                                    Answer <span aria-hidden="true">→</span> </a> </div>
-                            <div class="sample-answer hidden mt-3 pt-3 border-t border-gray-200 text-sm text-gray-600">
-                                <p>Sample: “I have used Apache Airflow extensively for orchestrating complex
-                                    workflows... [rest of answer]”</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="question-card hidden bg-white shadow overflow-hidden sm:rounded-lg transition duration-150 ease-in-out">
-                        <div class="px-4 py-5 sm:p-6">
-                            <h3 class="text-lg leading-6 font-medium text-gray-900">8. How do you optimize SQL queries
-                                for performance?</h3>
-                            <div class="mt-1"> <span class="level-tag">Junior</span><span
-                                    class="level-tag">Mid</span><span class="level-tag">Senior</span> </div>
-                            <div class="mt-2 max-w-xl text-sm text-gray-500">
-                                <p> <span class="font-medium">What Interviewers Look For:</span> Specific techniques
-                                    (indexing, filtering early, avoiding SELECT *, query plans). </p>
-                            </div>
-                            <div class="mt-3 text-sm"> <a href="#"
-                                    class="toggle-answer-btn font-medium text-blue-600 hover:text-blue-500"> View Sample
-                                    Answer <span aria-hidden="true">→</span> </a> </div>
-                            <div class="sample-answer hidden mt-3 pt-3 border-t border-gray-200 text-sm text-gray-600">
-                                <p>Ensure appropriate indexes are created on columns used in WHERE clauses and JOIN
-                                    conditions... [rest of answer]”</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="question-card hidden bg-white shadow overflow-hidden sm:rounded-lg transition duration-150 ease-in-out">
-                        <div class="px-4 py-5 sm:p-6">
-                            <h3 class="text-lg leading-6 font-medium text-gray-900">9. What is a data lake and how does
-                                it complement a data warehouse?</h3>
-                            <div class="mt-1"> <span class="level-tag">Mid</span><span class="level-tag">Senior</span>
-                            </div>
-                            <div class="mt-2 max-w-xl text-sm text-gray-500">
-                                <p> <span class="font-medium">What Interviewers Look For:</span> Understanding the
-                                    purpose and characteristics of each (raw vs. structured, schema-on-read vs.
-                                    schema-on-write) and how they work together. </p>
-                            </div>
-                            <div class="mt-3 text-sm"> <a href="#"
-                                    class="toggle-answer-btn font-medium text-blue-600 hover:text-blue-500"> View Sample
-                                    Answer <span aria-hidden="true">→</span> </a> </div>
-                            <div class="sample-answer hidden mt-3 pt-3 border-t border-gray-200 text-sm text-gray-600">
-                                <p>A data lake is a centralized repository that stores vast amounts of raw data... [rest
-                                    of answer]”</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="question-card hidden bg-white shadow overflow-hidden sm:rounded-lg transition duration-150 ease-in-out">
-                        <div class="px-4 py-5 sm:p-6">
-                            <h3 class="text-lg leading-6 font-medium text-gray-900">10. How do you handle schema
-                                evolution in data pipelines?</h3>
-                            <div class="mt-1"> <span class="level-tag">Mid</span><span class="level-tag">Senior</span>
-                            </div>
-                            <div class="mt-2 max-w-xl text-sm text-gray-500">
-                                <p> <span class="font-medium">What Interviewers Look For:</span> Awareness of challenges
-                                    (pipeline breaks) and solutions (schema registry, backward/forward compatibility,
-                                    flexible parsing). </p>
-                            </div>
-                            <div class="mt-3 text-sm"> <a href="#"
-                                    class="toggle-answer-btn font-medium text-blue-600 hover:text-blue-500"> View Sample
-                                    Answer <span aria-hidden="true">→</span> </a> </div>
-                            <div class="sample-answer hidden mt-3 pt-3 border-t border-gray-200 text-sm text-gray-600">
-                                <p>Use a schema registry (like Avro Schema Registry with Kafka) to manage schema
-                                    versions... [rest of answer]”</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="question-card hidden bg-white shadow overflow-hidden sm:rounded-lg transition duration-150 ease-in-out">
-                        <div class="px-4 py-5 sm:p-6">
-                            <h3 class="text-lg leading-6 font-medium text-gray-900">11. Describe a challenging data
-                                engineering project and how you solved it.</h3>
-                            <div class="mt-1"> <span class="level-tag">Mid</span><span class="level-tag">Senior</span>
-                            </div>
-                            <div class="mt-2 max-w-xl text-sm text-gray-500">
-                                <p> <span class="font-medium">What Interviewers Look For:</span> STAR method (Situation,
-                                    Task, Action, Result), problem-solving skills, technical depth, impact of solution.
-                                </p>
-                            </div>
-                            <div class="mt-3 text-sm"> <a href="#"
-                                    class="toggle-answer-btn font-medium text-blue-600 hover:text-blue-500"> View Sample
-                                    Answer <span aria-hidden="true">→</span> </a> </div>
-                            <div class="sample-answer hidden mt-3 pt-3 border-t border-gray-200 text-sm text-gray-600">
-                                <p>Sample: “(Situation) In a previous role, we had a critical nightly batch pipeline...
-                                    [rest of answer]”</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="question-card hidden bg-white shadow overflow-hidden sm:rounded-lg transition duration-150 ease-in-out">
-                        <div class="px-4 py-5 sm:p-6">
-                            <h3 class="text-lg leading-6 font-medium text-gray-900">12. What are the four Vs of Big
-                                Data?</h3>
-                            <div class="mt-1"> <span class="level-tag">Junior</span> </div>
-                            <div class="mt-2 max-w-xl text-sm text-gray-500">
-                                <p> <span class="font-medium">What Interviewers Look For:</span> Basic big data concepts
-                                    understanding. </p>
-                            </div>
-                            <div class="mt-3 text-sm"> <a href="#"
-                                    class="toggle-answer-btn font-medium text-blue-600 hover:text-blue-500"> View Sample
-                                    Answer <span aria-hidden="true">→</span> </a> </div>
-                            <div class="sample-answer hidden mt-3 pt-3 border-t border-gray-200 text-sm text-gray-600">
-                                <p><strong>Volume:</strong> The sheer amount of data generated and
-                                    stored.<br><strong>Velocity:</strong> The speed at which data is generated and needs
-                                    to be processed.<br><strong>Variety:</strong> The different types of data
-                                    (structured, semi-structured, unstructured).<br><strong>Veracity:</strong> The
-                                    quality, accuracy, and trustworthiness of the data.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="question-card hidden bg-white shadow overflow-hidden sm:rounded-lg transition duration-150 ease-in-out">
-                        <div class="px-4 py-5 sm:p-6">
-                            <h3 class="text-lg leading-6 font-medium text-gray-900">13. How do you ensure compliance
-                                with data privacy regulations like GDPR?</h3>
-                            <div class="mt-1"> <span class="level-tag">Mid</span><span class="level-tag">Senior</span>
-                            </div>
-                            <div class="mt-2 max-w-xl text-sm text-gray-500">
-                                <p> <span class="font-medium">What Interviewers Look For:</span> Awareness of privacy
-                                    concerns and technical controls (anonymization, encryption, access control). </p>
-                            </div>
-                            <div class="mt-3 text-sm"> <a href="#"
-                                    class="toggle-answer-btn font-medium text-blue-600 hover:text-blue-500"> View Sample
-                                    Answer <span aria-hidden="true">→</span> </a> </div>
-                            <div class="sample-answer hidden mt-3 pt-3 border-t border-gray-200 text-sm text-gray-600">
-                                <p>Implement techniques like data masking or anonymization for sensitive fields (PII)...
-                                    [rest of answer]”</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="question-card hidden bg-white shadow overflow-hidden sm:rounded-lg transition duration-150 ease-in-out">
-                        <div class="px-4 py-5 sm:p-6">
-                            <h3 class="text-lg leading-6 font-medium text-gray-900">14. What is Hadoop and what are its
-                                main components?</h3>
-                            <div class="mt-1"> <span class="level-tag">Junior</span><span class="level-tag">Mid</span>
-                            </div>
-                            <div class="mt-2 max-w-xl text-sm text-gray-500">
-                                <p> <span class="font-medium">What Interviewers Look For:</span> Foundational knowledge
-                                    of the Hadoop ecosystem (HDFS, MapReduce, YARN). </p>
-                            </div>
-                            <div class="mt-3 text-sm"> <a href="#"
-                                    class="toggle-answer-btn font-medium text-blue-600 hover:text-blue-500"> View Sample
-                                    Answer <span aria-hidden="true">→</span> </a> </div>
-                            <div class="sample-answer hidden mt-3 pt-3 border-t border-gray-200 text-sm text-gray-600">
-                                <p>Hadoop is an open-source framework designed for distributed storage and processing...
-                                    [rest of answer]”</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="question-card hidden bg-white shadow overflow-hidden sm:rounded-lg transition duration-150 ease-in-out">
-                        <div class="px-4 py-5 sm:p-6">
-                            <h3 class="text-lg leading-6 font-medium text-gray-900">15. How do you handle performance
-                                bottlenecks in data pipelines?</h3>
-                            <div class="mt-1"> <span class="level-tag">Mid</span><span class="level-tag">Senior</span>
-                            </div>
-                            <div class="mt-2 max-w-xl text-sm text-gray-500">
-                                <p> <span class="font-medium">What Interviewers Look For:</span> Systematic
-                                    troubleshooting approach (monitoring, optimization, scaling, caching). </p>
-                            </div>
-                            <div class="mt-3 text-sm"> <a href="#"
-                                    class="toggle-answer-btn font-medium text-blue-600 hover:text-blue-500"> View Sample
-                                    Answer <span aria-hidden="true">→</span> </a> </div>
-                            <div class="sample-answer hidden mt-3 pt-3 border-t border-gray-200 text-sm text-gray-600">
-                                <p>First, identify the bottleneck using monitoring tools... [rest of answer]”</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="question-card hidden bg-white shadow overflow-hidden sm:rounded-lg transition duration-150 ease-in-out">
-                        <div class="px-4 py-5 sm:p-6">
-                            <h3 class="text-lg leading-6 font-medium text-gray-900">16. What is data profiling and why
-                                is it important?</h3>
-                            <div class="mt-1"> <span class="level-tag">Mid</span> </div>
-                            <div class="mt-2 max-w-xl text-sm text-gray-500">
-                                <p> <span class="font-medium">What Interviewers Look For:</span> Understanding the
-                                    process and its value in assessing data quality early. </p>
-                            </div>
-                            <div class="mt-3 text-sm"> <a href="#"
-                                    class="toggle-answer-btn font-medium text-blue-600 hover:text-blue-500"> View Sample
-                                    Answer <span aria-hidden="true">→</span> </a> </div>
-                            <div class="sample-answer hidden mt-3 pt-3 border-t border-gray-200 text-sm text-gray-600">
-                                <p>Data profiling is the process of examining data from an existing source... [rest of
-                                    answer]”</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="question-card hidden bg-white shadow overflow-hidden sm:rounded-lg transition duration-150 ease-in-out">
-                        <div class="px-4 py-5 sm:p-6">
-                            <h3 class="text-lg leading-6 font-medium text-gray-900">17. How do you design a scalable
-                                data pipeline?</h3>
-                            <div class="mt-1"> <span class="level-tag">Mid</span><span class="level-tag">Senior</span>
-                            </div>
-                            <div class="mt-2 max-w-xl text-sm text-gray-500">
-                                <p> <span class="font-medium">What Interviewers Look For:</span> Knowledge of
-                                    distributed systems, partitioning, decoupling, and cloud services. </p>
-                            </div>
-                            <div class="mt-3 text-sm"> <a href="#"
-                                    class="toggle-answer-btn font-medium text-blue-600 hover:text-blue-500"> View Sample
-                                    Answer <span aria-hidden="true">→</span> </a> </div>
-                            <div class="sample-answer hidden mt-3 pt-3 border-t border-gray-200 text-sm text-gray-600">
-                                <p>Use distributed processing frameworks like Apache Spark or Flink... [rest of answer]”
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="question-card hidden bg-white shadow overflow-hidden sm:rounded-lg transition duration-150 ease-in-out">
-                        <div class="px-4 py-5 sm:p-6">
-                            <h3 class="text-lg leading-6 font-medium text-gray-900">18. What is your experience with
-                                cloud data engineering?</h3>
-                            <div class="mt-1"> <span class="level-tag">Junior</span><span
-                                    class="level-tag">Mid</span><span class="level-tag">Senior</span> </div>
-                            <div class="mt-2 max-w-xl text-sm text-gray-500">
-                                <p> <span class="font-medium">What Interviewers Look For:</span> Specific cloud
-                                    platforms (AWS, GCP, Azure) and services used (S3, Redshift, BigQuery, Glue, Data
-                                    Factory etc.), and benefits realized. </p>
-                            </div>
-                            <div class="mt-3 text-sm"> <a href="#"
-                                    class="toggle-answer-btn font-medium text-blue-600 hover:text-blue-500"> View Sample
-                                    Answer <span aria-hidden="true">→</span> </a> </div>
-                            <div class="sample-answer hidden mt-3 pt-3 border-t border-gray-200 text-sm text-gray-600">
-                                <p>Sample: “I have primarily worked with AWS, building data pipelines that ingest data
-                                    into S3 data lakes... [rest of answer]”</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="question-card hidden bg-white shadow overflow-hidden sm:rounded-lg transition duration-150 ease-in-out">
-                        <div class="px-4 py-5 sm:p-6">
-                            <h3 class="text-lg leading-6 font-medium text-gray-900">19. How do you stay updated with the
-                                latest trends in data engineering?</h3>
-                            <div class="mt-1"> <span class="level-tag">All Levels</span> </div>
-                            <div class="mt-2 max-w-xl text-sm text-gray-500">
-                                <p> <span class="font-medium">What Interviewers Look For:</span> Proactiveness in
-                                    learning, specific resources mentioned (blogs, communities, courses). </p>
-                            </div>
-                            <div class="mt-3 text-sm"> <a href="#"
-                                    class="toggle-answer-btn font-medium text-blue-600 hover:text-blue-500"> View Sample
-                                    Answer <span aria-hidden="true">→</span> </a> </div>
-                            <div class="sample-answer hidden mt-3 pt-3 border-t border-gray-200 text-sm text-gray-600">
-                                <p>I subscribe to newsletters like Data Engineering Weekly... [rest of answer]”</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="question-card hidden bg-white shadow overflow-hidden sm:rounded-lg transition duration-150 ease-in-out">
-                        <div class="px-4 py-5 sm:p-6">
-                            <h3 class="text-lg leading-6 font-medium text-gray-900">20. How do you collaborate with
-                                cross-functional teams?</h3>
-                            <div class="mt-1"> <span class="level-tag">Mid</span><span class="level-tag">Senior</span>
-                            </div>
-                            <div class="mt-2 max-w-xl text-sm text-gray-500">
-                                <p> <span class="font-medium">What Interviewers Look For:</span> Communication skills,
-                                    understanding stakeholder needs, documentation practices. </p>
-                            </div>
-                            <div class="mt-3 text-sm"> <a href="#"
-                                    class="toggle-answer-btn font-medium text-blue-600 hover:text-blue-500"> View Sample
-                                    Answer <span aria-hidden="true">→</span> </a> </div>
-                            <div class="sample-answer hidden mt-3 pt-3 border-t border-gray-200 text-sm text-gray-600">
-                                <p>Sample: “Effective collaboration involves clear communication and understanding
-                                    requirements... [rest of answer]”</p>
-                            </div>
-                        </div>
-                    </div>
+                <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Mock Interviews</p>
+                <div class="mt-2 ml-16 text-base text-gray-500">
+                  <p> Practice explaining your past projects, challenges, and solutions clearly and concisely.
+                    Record yourself to improve communication skills. </p>
                 </div>
-                <div class="mt-10 text-center"> <button id="view-all-questions-btn"
-                        class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-                        View All 20+ Questions <i class="fas fa-arrow-down ml-2"></i> </button> </div>
+              </div>
+              <div class="relative">
+                <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-purple-500 text-white">
+                  <i class="fas fa-sync-alt text-xl"></i>
+                </div>
+                <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Stay Updated</p>
+                <div class="mt-2 ml-16 text-base text-gray-500">
+                  <p> Follow industry blogs, join communities, and keep learning new tools and frameworks. The
+                    field evolves rapidly - continuous learning is key. </p>
+                </div>
+              </div>
+              <div class="relative">
+                <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-yellow-500 text-white">
+                  <i class="fas fa-network-wired text-xl"></i>
+                </div>
+                <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Understand System Design</p>
+                <div class="mt-2 ml-16 text-base text-gray-500">
+                  <p> Focus on scalability, fault tolerance, partitioning, and automation. Be ready to
+                    whiteboard solutions to common data engineering problems. </p>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
+      </div>
 
-    <!-- System Design Section -->
-    <div id="system-design" class="bg-white py-16">
+      <!-- Testimonials Section -->
+      <div id="testimonials" class="bg-gray-50 py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="lg:text-center">
-                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">System Design</h2>
-                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                    System Design Examples
+          <div class="lg:text-center">
+            <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Success Stories</h2>
+            <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+              Hear From Engineers Who Succeeded
+            </p>
+            <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+              See how DataEngineerPrep helped others land their dream jobs.
+            </p>
+          </div>
+          <div class="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
+            <div class="testimonial-card bg-white p-6 rounded-lg shadow-lg">
+              <div class="flex items-center mb-4">
+                <div class="ml-4">
+                  <div class="text-base font-medium text-gray-900">Priya Sharma</div>
+                  <div class="text-sm text-gray-500">Data Engineer @ TechCorp</div>
+                </div>
+              </div>
+              <blockquote class="mt-2">
+                <p class="text-base text-gray-600">
+                  "The system design examples were incredibly helpful. I felt much more confident tackling those
+                  questions
+                  after using this guide, and I landed the job!"
                 </p>
-                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-                    Common data engineering system design challenges.
+              </blockquote>
+            </div>
+            <div class="testimonial-card bg-white p-6 rounded-lg shadow-lg">
+              <div class="flex items-center mb-4">
+
+                <div class="ml-4">
+                  <div class="text-base font-medium text-gray-900">Rohan Mehta</div>
+                  <div class="text-sm text-gray-500">Mid-Level Data Engineer</div>
+                </div>
+              </div>
+              <blockquote class="mt-2">
+                <p class="text-base text-gray-600">
+                  "The curated resources saved me so much time. Instead of searching endlessly, I could focus on
+                  learning
+                  the key concepts listed here. The SQL questions were spot on."
                 </p>
+              </blockquote>
             </div>
-            <div class="mt-10 space-y-8">
-                <!-- System Design Card 1 -->
-                <div class="system-design-card bg-gray-50 shadow overflow-hidden sm:rounded-lg p-6">
-                    <h3 class="text-xl leading-6 font-semibold text-gray-900 mb-4">Design a Real-Time Analytics
-                        Dashboard</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <h4 class="text-md font-medium text-gray-700 mb-2">Key Considerations:</h4>
-                            <ul class="list-disc pl-5 text-sm text-gray-600 space-y-1">
-                                <li>Data sources (e.g., web logs, application events)</li>
-                                <li>Data ingestion method (e.g., Kafka, Kinesis, Pulsar)</li>
-                                <li>Real-time processing engine (e.g., Spark Streaming, Flink, Kafka Streams)</li>
-                                <li>Storage for aggregated results (e.g., Druid, ClickHouse, TimescaleDB)</li>
-                                <li>Dashboarding tool (e.g., Superset, Grafana, Tableau)</li>
-                                <li>Scalability, latency, fault tolerance requirements</li>
-                                <li>Data consistency needs (at-least-once, exactly-once)</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4 class="text-md font-medium text-gray-700 mb-2">High-Level Approach:</h4>
-                            <ul class="list-disc pl-5 text-sm text-gray-600 space-y-1">
-                                <li>Ingest raw events into a message queue (Kafka/Kinesis).</li>
-                                <li>Use a stream processing engine (Flink/Spark Streaming) to consume events, perform
-                                    aggregations (e.g., counts, sums over time windows).</li>
-                                <li>Write aggregated results to a low-latency analytical database (Druid/ClickHouse).
-                                </li>
-                                <li>Connect the dashboarding tool to the analytical database for visualization.</li>
-                                <li>Implement monitoring and alerting for pipeline health.</li>
-                            </ul>
-                            <p class="text-sm text-gray-500 mt-3 italic"></p>
-                        </div>
-                    </div>
+            <div class="testimonial-card bg-white p-6 rounded-lg shadow-lg">
+              <div class="flex items-center mb-4">
+                <div class="ml-4">
+                  <div class="text-base font-medium text-gray-900">Aisha Khan</div>
+                  <div class="text-sm text-gray-500">Senior Data Engineer @ FinTech Startup</div>
                 </div>
-                <!-- System Design Card 2 -->
-                <div class="system-design-card bg-gray-50 shadow overflow-hidden sm:rounded-lg p-6">
-                    <h3 class="text-xl leading-6 font-semibold text-gray-900 mb-4">Design a Recommendation System Data
-                        Pipeline</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <h4 class="text-md font-medium text-gray-700 mb-2">Key Considerations:</h4>
-                            <ul class="list-disc pl-5 text-sm text-gray-600 space-y-1">
-                                <li>Input data (user interactions, item metadata, user profiles)</li>
-                                <li>Batch vs. real-time recommendation needs</li>
-                                <li>Feature engineering process</li>
-                                <li>Model training approach (e.g., collaborative filtering, content-based)</li>
-                                <li>Model serving mechanism (e.g., API, batch precomputation)</li>
-                                <li>A/B testing framework for evaluating models</li>
-                                <li>Scalability for users and items</li>
-                                <li>Cold-start problem</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4 class="text-md font-medium text-gray-700 mb-2">High-Level Approach:</h4>
-                            <ul class="list-disc pl-5 text-sm text-gray-600 space-y-1">
-                                <li>Collect interaction data (logs) into a data lake (S3/GCS).</li>
-                                <li>Use batch processing (Spark) to clean data and generate features.</li>
-                                <li>Train recommendation models (e.g., Spark MLlib, TensorFlow) periodically.</li>
-                                <li>Store trained models or precomputed recommendations in a suitable store (e.g.,
-                                    database, key-value store).</li>
-                                <li>Expose recommendations via an API or load into serving layer.</li>
-                                <li>Implement feedback loop to capture new interactions for model retraining.</li>
-                            </ul>
-                            <p class="text-sm text-gray-500 mt-3 italic"></p>
-                        </div>
-                    </div>
-                </div>
+              </div>
+              <blockquote class="mt-2">
+                <p class="text-base text-gray-600">
+                  "This site is the best consolidation of DE interview prep I've found. Covered all the bases from
+                  fundamentals to advanced topics and cloud platforms. Highly recommended!"
+                </p>
+              </blockquote>
             </div>
+          </div>
         </div>
-    </div>
+      </div>
 
-    <!-- Skills Section -->
-    <div id="skills" class="bg-white py-16">
+
+      <!-- Newsletter Section -->
+      <div id="newsletter" class="bg-white py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="lg:text-center">
-                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Skills</h2>
-                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"> Key Skills
-                    and Topics to Master </p>
-                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto"> The essential toolkit for data engineers in
-                    2025. </p>
-            </div>
-            <div class="mt-10">
-                <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
-                    <div class="bg-gray-50 p-6 rounded-lg">
-                        <div class="flex items-center">
-                            <div class="flex-shrink-0 bg-blue-500 rounded-md p-3"> <i
-                                    class="fas fa-database text-white text-xl"></i> </div>
-                            <div class="ml-5">
-                                <h3 class="text-lg font-medium text-gray-900">SQL Mastery</h3>
-                                <div class="mt-1"> <span class="level-tag">Junior</span><span
-                                        class="level-tag">Mid</span><span class="level-tag">Senior</span> </div>
-                            </div>
-                        </div>
-                        <div class="mt-2">
-                            <p class="text-sm text-gray-600"> Joins, CTEs, window functions, query optimization. The
-                                foundation of data manipulation. </p>
-                        </div>
-                        <div class="mt-4">
-                            <div class="flex flex-wrap gap-2"> <span
-                                    class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
-                                    Advanced Queries </span> <span
-                                    class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
-                                    Performance Tuning </span> </div>
-                        </div>
-                    </div>
-                    <div class="bg-gray-50 p-6 rounded-lg">
-                        <div class="flex items-center">
-                            <div class="flex-shrink-0 bg-green-500 rounded-md p-3"> <i
-                                    class="fas fa-project-diagram text-white text-xl"></i> </div>
-                            <div class="ml-5">
-                                <h3 class="text-lg font-medium text-gray-900">Data Modeling</h3>
-                                <div class="mt-1"> <span class="level-tag">Mid</span><span
-                                        class="level-tag">Senior</span> </div>
-                            </div>
-                        </div>
-                        <div class="mt-2">
-                            <p class="text-sm text-gray-600"> Star/snowflake schemas, normalization, denormalization.
-                                Designing efficient data structures. </p>
-                        </div>
-                        <div class="mt-4">
-                            <div class="flex flex-wrap gap-2"> <span
-                                    class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                                    Warehouse Design </span> <span
-                                    class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                                    Schema Patterns </span> </div>
-                        </div>
-                    </div>
-                    <div class="bg-gray-50 p-6 rounded-lg">
-                        <div class="flex items-center">
-                            <div class="flex-shrink-0 bg-purple-500 rounded-md p-3"> <i
-                                    class="fas fa-code-branch text-white text-xl"></i> </div>
-                            <div class="ml-5">
-                                <h3 class="text-lg font-medium text-gray-900">ETL/ELT Pipelines</h3>
-                                <div class="mt-1"> <span class="level-tag">Junior</span><span
-                                        class="level-tag">Mid</span><span class="level-tag">Senior</span> </div>
-                            </div>
-                        </div>
-                        <div class="mt-2">
-                            <p class="text-sm text-gray-600"> Design, testing, scaling, and maintenance. The core of
-                                data engineering workflows. </p>
-                        </div>
-                        <div class="mt-4">
-                            <div class="flex flex-wrap gap-2"> <span
-                                    class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-purple-100 text-purple-800">
-                                    Airflow </span> <span
-                                    class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-purple-100 text-purple-800">
-                                    Data Integration </span> </div>
-                        </div>
-                    </div>
-                    <div class="bg-gray-50 p-6 rounded-lg">
-                        <div class="flex items-center">
-                            <div class="flex-shrink-0 bg-yellow-500 rounded-md p-3"> <i
-                                    class="fab fa-python text-white text-xl"></i> </div>
-                            <div class="ml-5">
-                                <h3 class="text-lg font-medium text-gray-900">Programming</h3>
-                                <div class="mt-1"> <span class="level-tag">Junior</span><span
-                                        class="level-tag">Mid</span><span class="level-tag">Senior</span> </div>
-                            </div>
-                        </div>
-                        <div class="mt-2">
-                            <p class="text-sm text-gray-600"> Python (Pandas, NumPy, PySpark), Scala, or Java. Essential
-                                for custom solutions and automation. </p>
-                        </div>
-                        <div class="mt-4">
-                            <div class="flex flex-wrap gap-2"> <span
-                                    class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">
-                                    Python </span> <span
-                                    class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">
-                                    PySpark </span> </div>
-                        </div>
-                    </div>
-                    <div class="bg-gray-50 p-6 rounded-lg">
-                        <div class="flex items-center">
-                            <div class="flex-shrink-0 bg-red-500 rounded-md p-3"> <i
-                                    class="fas fa-cloud text-white text-xl"></i> </div>
-                            <div class="ml-5">
-                                <h3 class="text-lg font-medium text-gray-900">Cloud Platforms</h3>
-                                <div class="mt-1"> <span class="level-tag">Junior</span><span
-                                        class="level-tag">Mid</span><span class="level-tag">Senior</span> </div>
-                            </div>
-                        </div>
-                        <div class="mt-2">
-                            <p class="text-sm text-gray-600"> AWS (Redshift, Glue), GCP (BigQuery, Dataflow), Azure
-                                (Data Factory). The modern data stack. </p>
-                        </div>
-                        <div class="mt-4">
-                            <div class="flex flex-wrap gap-2"> <span
-                                    class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">
-                                    AWS </span> <span
-                                    class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">
-                                    GCP </span> <span
-                                    class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">
-                                    Azure </span> </div>
-                        </div>
-                    </div>
-                    <div class="bg-gray-50 p-6 rounded-lg">
-                        <div class="flex items-center">
-                            <div class="flex-shrink-0 bg-indigo-500 rounded-md p-3"> <i
-                                    class="fas fa-chart-line text-white text-xl"></i> </div>
-                            <div class="ml-5">
-                                <h3 class="text-lg font-medium text-gray-900">Data Quality</h3>
-                                <div class="mt-1"> <span class="level-tag">Mid</span><span
-                                        class="level-tag">Senior</span> </div>
-                            </div>
-                        </div>
-                        <div class="mt-2">
-                            <p class="text-sm text-gray-600"> Data validation frameworks (Great Expectations), logging,
-                                and alerting. Ensuring reliable data. </p>
-                        </div>
-                        <div class="mt-4">
-                            <div class="flex flex-wrap gap-2"> <span
-                                    class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800">
-                                    Validation </span> <span
-                                    class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800">
-                                    Monitoring </span> </div>
-                        </div>
-                    </div>
+          <div class="bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg shadow-xl overflow-hidden">
+            <div class="px-6 py-12 sm:p-16">
+              <div class="max-w-xl mx-auto lg:max-w-none lg:flex lg:items-center">
+                <div class="lg:w-1/2">
+                  <h2 class="text-3xl font-extrabold text-white"> Stay Updated for 2025 </h2>
+                  <p class="mt-4 text-lg text-blue-100"> Get the latest AI & data engineering interview tips, resources,
+                    and
+                    trends directly to your inbox. </p>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Tips Section -->
-    <div id="tips" class="bg-white py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="lg:text-center">
-                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Tips</h2>
-                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"> Practical
-                    Tips for Success </p>
-                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto"> Actionable advice to help you stand out in
-                    interviews. </p>
-            </div>
-            <div class="mt-10">
-                <div class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
-                    <div class="relative">
-                        <div
-                            class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
-                            <i class="fas fa-laptop-code text-xl"></i>
-                        </div>
-                        <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Build a Portfolio</p>
-                        <div class="mt-2 ml-16 text-base text-gray-500">
-                            <p> Showcase end-to-end projects (data ingestion, transformation, storage, and analytics)
-                                using real datasets. GitHub repositories with well-documented projects are gold. </p>
-                        </div>
-                    </div>
-                    <div class="relative">
-                        <div
-                            class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-green-500 text-white">
-                            <i class="fas fa-comments text-xl"></i>
-                        </div>
-                        <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Mock Interviews</p>
-                        <div class="mt-2 ml-16 text-base text-gray-500">
-                            <p> Practice explaining your past projects, challenges, and solutions clearly and concisely.
-                                Record yourself to improve communication skills. </p>
-                        </div>
-                    </div>
-                    <div class="relative">
-                        <div
-                            class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-purple-500 text-white">
-                            <i class="fas fa-sync-alt text-xl"></i>
-                        </div>
-                        <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Stay Updated</p>
-                        <div class="mt-2 ml-16 text-base text-gray-500">
-                            <p> Follow industry blogs, join communities, and keep learning new tools and frameworks. The
-                                field evolves rapidly - continuous learning is key. </p>
-                        </div>
-                    </div>
-                    <div class="relative">
-                        <div
-                            class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-yellow-500 text-white">
-                            <i class="fas fa-network-wired text-xl"></i>
-                        </div>
-                        <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Understand System Design</p>
-                        <div class="mt-2 ml-16 text-base text-gray-500">
-                            <p> Focus on scalability, fault tolerance, partitioning, and automation. Be ready to
-                                whiteboard solutions to common data engineering problems. </p>
-                        </div>
-                    </div>
+                <div class="mt-8 lg:mt-0 lg:w-1/2">
+                  <form action="https://sathyaanand.substack.com/" method="get" target="_blank" class="sm:flex"> <label
+                      for="email-address-redirect" class="sr-only">Email address (will open Substack)</label> <input
+                      id="email-address-redirect" name="email_placeholder" type="email"
+                      class="w-full px-5 py-3 border border-transparent placeholder-gray-500 focus:ring-2 focus:ring-offset-2 focus:ring-offset-blue-700 focus:ring-white focus:border-white sm:max-w-xs rounded-md"
+                      placeholder="Enter your email">
+                    <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0"> <button type="submit"
+                        class="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-blue-700 focus:ring-white">
+                        Subscribe </button> </div>
+                  </form>
+                  <p class="mt-3 text-sm text-blue-100"> We respect your privacy. Unsubscribe at any time. </p>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
+      </div>
 
-    <!-- Newsletter Section -->
-    <div id="newsletter" class="bg-white py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg shadow-xl overflow-hidden">
-                <div class="px-6 py-12 sm:p-16">
-                    <div class="max-w-xl mx-auto lg:max-w-none lg:flex lg:items-center">
-                        <div class="lg:w-1/2">
-                            <h2 class="text-3xl font-extrabold text-white"> Stay Updated for 2025 </h2>
-                            <p class="mt-4 text-lg text-blue-100"> Get the latest AI & data engineering interview tips,
-                                resources, and trends directly to your inbox. </p>
-                        </div>
-                        <div class="mt-8 lg:mt-0 lg:w-1/2">
-                            <form action="https://sathyaanand.substack.com/" method="get" target="_blank"
-                                class="sm:flex">
-                                <label for="email-address-redirect" class="sr-only">Email address (will open
-                                    Substack)</label>
-                                <input id="email-address-redirect" name="email_placeholder" type="email"
-                                    class="w-full px-5 py-3 border border-transparent placeholder-gray-500 focus:ring-2 focus:ring-offset-2 focus:ring-offset-blue-700 focus:ring-white focus:border-white sm:max-w-xs rounded-md"
-                                    placeholder="Enter your email">
-                                <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0">
-                                    <button type="submit"
-                                        class="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-blue-700 focus:ring-white">
-                                        Subscribe
-                                    </button>
-                                </div>
-                            </form>
-                            <p class="mt-3 text-sm text-blue-100"> We respect your privacy. Unsubscribe at any time.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <footer class="bg-gray-800">
+      <!-- Footer -->
+      <footer class="bg-gray-800">
         <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-            <div class="xl:grid xl:grid-cols-3 xl:gap-8">
-                <div class="space-y-8 xl:col-span-1">
-                    <div class="flex items-center"> <i class="fas fa-database text-blue-400 text-2xl mr-2"></i> <span
-                            class="text-xl font-bold text-white">DataEngineerPrep</span> </div>
-                    <p class="text-gray-300 text-base"> The ultimate guide to cracking data engineering interviews in
-                        2025. </p>
-                    <div class="flex space-x-6"> <a href="https://topmate.io/sathyaanand" target="_blank"
-                            class="text-gray-400 hover:text-white" title="Topmate"><i
-                                class="fas fa-user-circle text-xl"></i></a> <a
-                            href="https://www.linkedin.com/in/msathyaanand/" target="_blank"
-                            class="text-gray-400 hover:text-white" title="LinkedIn"><i
-                                class="fab fa-linkedin text-xl"></i></a> <a
-                            href="https://chat.whatsapp.com/Bh2R3HSpMUE0C9YBgNkCBe" target="_blank"
-                            class="text-gray-400 hover:text-white" title="WhatsApp Community"><i
-                                class="fab fa-whatsapp text-xl"></i></a> <a href="https://linktr.ee/sathyaanand"
-                            target="_blank" class="text-gray-400 hover:text-white" title="Linktree"><i
-                                class="fas fa-link text-xl"></i></a> </div>
-                </div>
-                <div class="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
-                    <div class="md:grid md:grid-cols-2 md:gap-8">
-                        <div>
-                            <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase"> Resources </h3>
-                            <ul class="mt-4 space-y-4">
-                                <li> <a href="#resources" class="text-base text-gray-400 hover:text-white"> Books </a>
-                                </li>
-                                <li> <a href="#resources" class="text-base text-gray-400 hover:text-white"> Courses </a>
-                                </li>
-                                <li> <a href="#resources" class="text-base text-gray-400 hover:text-white">
-                                        Certifications </a> </li>
-                                <li> <a href="#resources" class="text-base text-gray-400 hover:text-white"> Communities
-                                    </a> </li>
-                            </ul>
-                        </div>
-                        <div class="mt-12 md:mt-0">
-                            <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase"> Interview Prep
-                            </h3>
-                            <ul class="mt-4 space-y-4">
-                                <li> <a href="#questions" class="text-base text-gray-400 hover:text-white"> Questions
-                                    </a> </li>
-                                <li> <a href="#system-design" class="text-base text-gray-400 hover:text-white"> System
-                                        Design </a> </li>
-                                <li> <a href="#skills" class="text-base text-gray-400 hover:text-white"> SQL Challenges
-                                    </a> </li>
-                                <li> <a href="#tips" class="text-base text-gray-400 hover:text-white"> Mock Interviews
-                                    </a> </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="md:grid md:grid-cols-2 md:gap-8">
-                        <div>
-                            <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase"> Company </h3>
-                            <ul class="mt-4 space-y-4">
-                                <li> <a href="#" class="text-base text-gray-400 hover:text-white"> About </a> </li>
-                                <li> <a href="#" class="text-base text-gray-400 hover:text-white"> Blog </a> </li>
-                                <li> <a href="#" class="text-base text-gray-400 hover:text-white"> Careers </a> </li>
-                                <li> <a href="#" class="text-base text-gray-400 hover:text-white"> Contact </a> </li>
-                            </ul>
-                        </div>
-                        <div class="mt-12 md:mt-0">
-                            <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase"> Legal </h3>
-                            <ul class="mt-4 space-y-4">
-                                <li> <a href="#" class="text-base text-gray-400 hover:text-white"> Privacy Policy </a>
-                                </li>
-                                <li> <a href="#" class="text-base text-gray-400 hover:text-white"> Terms of Service </a>
-                                </li>
-                                <li> <a href="#" class="text-base text-gray-400 hover:text-white"> Cookie Policy </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+          <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+            <div class="space-y-8 xl:col-span-1">
+              <div class="flex items-center"> <i class="fas fa-database text-blue-400 text-2xl mr-2"></i> <span
+                  class="text-xl font-bold text-white">DataEngineerPrep</span> </div>
+              <p class="text-gray-300 text-base"> The ultimate guide to cracking data engineering interviews in 2025.
+              </p>
+              <div class="flex space-x-6"> <a href="https://topmate.io/sathyaanand" target="_blank"
+                  class="text-gray-400 hover:text-white" title="Topmate"><i class="fas fa-user-circle text-xl"></i></a>
+                <a href="https://www.linkedin.com/in/msathyaanand/" target="_blank"
+                  class="text-gray-400 hover:text-white" title="LinkedIn"><i class="fab fa-linkedin text-xl"></i></a> <a
+                  href="https://chat.whatsapp.com/Bh2R3HSpMUE0C9YBgNkCBe" target="_blank"
+                  class="text-gray-400 hover:text-white" title="WhatsApp Community"><i
+                    class="fab fa-whatsapp text-xl"></i></a> <a href="https://linktr.ee/sathyaanand" target="_blank"
+                  class="text-gray-400 hover:text-white" title="Linktree"><i class="fas fa-link text-xl"></i></a>
+              </div>
             </div>
-            <div class="mt-12 border-t border-gray-700 pt-8">
-                <p class="text-base text-gray-400 text-center"> © 2025 DataEngineerPrep by Sathya Anand. All rights
-                    reserved. </p>
+            <div class="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
+              <div class="md:grid md:grid-cols-2 md:gap-8">
+                <div>
+                  <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase"> Resources </h3>
+                  <ul class="mt-4 space-y-4">
+                    <li> <a href="#resources" class="text-base text-gray-400 hover:text-white"> Books </a> </li>
+                    <li> <a href="#resources" class="text-base text-gray-400 hover:text-white"> Courses </a> </li>
+                    <li> <a href="#resources" class="text-base text-gray-400 hover:text-white"> Certifications </a>
+                    </li>
+                    <li> <a href="#resources" class="text-base text-gray-400 hover:text-white"> Communities </a> </li>
+                  </ul>
+                </div>
+                <div class="mt-12 md:mt-0">
+                  <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase"> Interview Prep </h3>
+                  <ul class="mt-4 space-y-4">
+                    <li> <a href="#questions" class="text-base text-gray-400 hover:text-white"> Questions </a> </li>
+                    <li> <a href="#system-design" class="text-base text-gray-400 hover:text-white"> System Design </a>
+                    </li>
+                    <li> <a href="#skills" class="text-base text-gray-400 hover:text-white"> SQL Challenges </a> </li>
+                    <li> <a href="#tips" class="text-base text-gray-400 hover:text-white"> Mock Interviews </a> </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="md:grid md:grid-cols-2 md:gap-8">
+                <div>
+                  <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase"> Company </h3>
+                  <ul class="mt-4 space-y-4">
+                    <li> <a href="#" class="text-base text-gray-400 hover:text-white"> About </a> </li>
+                    <li> <a href="#" class="text-base text-gray-400 hover:text-white"> Blog </a> </li>
+                    <li> <a href="#" class="text-base text-gray-400 hover:text-white"> Careers </a> </li>
+                    <li> <a href="#" class="text-base text-gray-400 hover:text-white"> Contact </a> </li>
+                  </ul>
+                </div>
+                <div class="mt-12 md:mt-0">
+                  <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase"> Legal </h3>
+                  <ul class="mt-4 space-y-4">
+                    <li> <a href="#" class="text-base text-gray-400 hover:text-white"> Privacy Policy </a> </li>
+                    <li> <a href="#" class="text-base text-gray-400 hover:text-white"> Terms of Service </a> </li>
+                    <li> <a href="#" class="text-base text-gray-400 hover:text-white"> Cookie Policy </a> </li>
+                  </ul>
+                </div>
+              </div>
             </div>
+          </div>
+          <div class="mt-12 border-t border-gray-700 pt-8">
+            <p class="text-base text-gray-400 text-center"> © 2025 DataEngineerPrep by Sathya Anand. All rights
+              reserved.
+            </p>
+          </div>
         </div>
-    </footer>
+      </footer>
 
-    <script>
+      <script defer> // Added defer
         document.addEventListener('DOMContentLoaded', function () {
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const questionsList = document.getElementById('questions-list');
-            const allQuestionCards = questionsList.querySelectorAll('.question-card');
-            const viewAllBtn = document.getElementById('view-all-questions-btn');
-            let questionsExpanded = false;
+          const mobileMenuButton = document.getElementById('mobile-menu-button');
+          const mobileMenu = document.getElementById('mobile-menu');
+          const questionsList = document.getElementById('questions-list');
+          const allQuestionCards = questionsList ? questionsList.querySelectorAll('.question-card') : [];
+          const viewAllBtn = document.getElementById('view-all-questions-btn');
+          let questionsExpanded = false;
 
-            if (mobileMenuButton && mobileMenu) { mobileMenuButton.addEventListener('click', function () { mobileMenu.classList.toggle('hidden'); const icon = mobileMenuButton.querySelector('i'); icon.classList.toggle('fa-bars'); icon.classList.toggle('fa-times'); }); }
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => { anchor.addEventListener('click', function (e) { e.preventDefault(); const targetId = this.getAttribute('href'); const targetElement = document.querySelector(targetId); if (targetElement) { if (mobileMenu && !mobileMenu.classList.contains('hidden')) { mobileMenu.classList.add('hidden'); const icon = mobileMenuButton.querySelector('i'); icon.classList.remove('fa-times'); icon.classList.add('fa-bars'); } targetElement.scrollIntoView({ behavior: 'smooth' }); } }); });
+          if (mobileMenuButton && mobileMenu) { mobileMenuButton.addEventListener('click', function () { mobileMenu.classList.toggle('hidden'); const icon = mobileMenuButton.querySelector('i'); icon.classList.toggle('fa-bars'); icon.classList.toggle('fa-times'); }); }
+          document.querySelectorAll('a[href^="#"]').forEach(anchor => { anchor.addEventListener('click', function (e) { e.preventDefault(); const targetId = this.getAttribute('href'); const targetElement = document.querySelector(targetId); if (targetElement) { if (mobileMenu && !mobileMenu.classList.contains('hidden')) { mobileMenu.classList.add('hidden'); const icon = mobileMenuButton.querySelector('i'); icon.classList.remove('fa-times'); icon.classList.add('fa-bars'); } const elementPosition = targetElement.getBoundingClientRect().top; const offsetPosition = elementPosition + window.pageYOffset - 80; window.scrollTo({ top: offsetPosition, behavior: "smooth" }); } }); });
 
-            if (viewAllBtn && allQuestionCards.length > 5) {
-                for (let i = 5; i < allQuestionCards.length; i++) { allQuestionCards[i].classList.add('hidden'); }
-                viewAllBtn.addEventListener('click', () => { questionsExpanded = !questionsExpanded; for (let i = 5; i < allQuestionCards.length; i++) { allQuestionCards[i].classList.toggle('hidden', !questionsExpanded); } viewAllBtn.innerHTML = questionsExpanded ? 'Show Fewer Questions <i class="fas fa-arrow-up ml-2"></i>' : 'View All 20+ Questions <i class="fas fa-arrow-down ml-2"></i>'; });
-            } else if (viewAllBtn) { viewAllBtn.style.display = 'none'; }
+          if (viewAllBtn && allQuestionCards.length > 5) {
+            for (let i = 5; i < allQuestionCards.length; i++) { allQuestionCards[i].classList.add('hidden'); }
+            viewAllBtn.addEventListener('click', () => { questionsExpanded = !questionsExpanded; for (let i = 5; i < allQuestionCards.length; i++) { allQuestionCards[i].classList.toggle('hidden', !questionsExpanded); } viewAllBtn.innerHTML = questionsExpanded ? 'Show Fewer Questions <i class="fas fa-arrow-up ml-2"></i>' : 'View All 20+ Questions <i class="fas fa-arrow-down ml-2"></i>'; });
+          } else if (viewAllBtn) { viewAllBtn.style.display = 'none'; }
 
-            const answerToggles = questionsList.querySelectorAll('.toggle-answer-btn');
-            answerToggles.forEach(button => { button.addEventListener('click', function (e) { e.preventDefault(); const questionCard = this.closest('.question-card'); const answerDiv = questionCard.querySelector('.sample-answer'); if (answerDiv) { answerDiv.classList.toggle('hidden'); } }); });
+          if (questionsList) { const answerToggles = questionsList.querySelectorAll('.toggle-answer-btn'); answerToggles.forEach(button => { button.addEventListener('click', function (e) { e.preventDefault(); const questionCard = this.closest('.question-card'); const answerDiv = questionCard.querySelector('.sample-answer'); if (answerDiv) { answerDiv.classList.toggle('hidden'); } }); }); }
         });
-    </script>
+      </script>
 </body>
 
 </html>
